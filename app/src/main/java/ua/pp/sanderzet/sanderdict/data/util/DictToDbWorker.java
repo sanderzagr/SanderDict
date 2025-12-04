@@ -1,13 +1,13 @@
 package ua.pp.sanderzet.sanderdict.data.util;
 
 import android.content.Context;
-import android.os.AsyncTask;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
 import android.util.Log;
 
 import java.io.File;
 
-import androidx.work.Result;
+//import androidx.work.Result;
 import androidx.work.Worker;
 import androidx.work.WorkerParameters;
 import ua.pp.sanderzet.sanderdict.SanderDictConstants;

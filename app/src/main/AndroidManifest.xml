@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="ua.pp.sanderzet.sanderdict">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -10,6 +9,7 @@
         android:maxSdkVersion="18"/>
 
     <application
+        android:networkSecurityConfig="@xml/network_security_config"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -18,6 +18,7 @@
         <activity
             android:name=".view.ui.MainActivity"
             android:label="@string/app_name"
+            android:exported="true"
             android:launchMode="singleTop"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -44,6 +45,7 @@
 
                 <receiver android:name=".widget.SanderDictWidget"
             android:label="@string/appwidget_text"
+                    android:exported="true"
             android:icon="@mipmap/ic_launcher">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -54,7 +56,8 @@
                 android:resource="@xml/sander_dict_widget_info" />
         </receiver>
 
-        <activity android:name=".widget.SanderDictWidgetConfigureActivity">
+        <activity android:name=".widget.SanderDictWidgetConfigureActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
             </intent-filter>

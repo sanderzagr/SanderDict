@@ -1,19 +1,17 @@
 package ua.pp.sanderzet.sanderdict.view.ui;
 
-import android.arch.lifecycle.MutableLiveData;
-import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModel;
-import android.arch.lifecycle.ViewModelProviders;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModelProviders;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -52,7 +50,7 @@ public class FragmentDictionaries extends Fragment {
         fragmentDictionariesViewModel.receiveDictsList();
 
         fragmentDictionariesViewModel. getDictionariesModelMutableLiveData().
-                observe(this,new Observer<List<DictionariesModel>>() {
+                observe(getViewLifecycleOwner(),new Observer<List<DictionariesModel>>() {
                     @Override
                     public void onChanged (@Nullable List < DictionariesModel > dictionariesModels) {
                         if (recyclerView.getAdapter() == null ) {

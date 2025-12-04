@@ -1,17 +1,17 @@
+
 package ua.pp.sanderzet.sanderdict.data.repository;
 
-import android.arch.lifecycle.LiveData;
-import android.arch.persistence.room.Dao;
-import android.arch.persistence.room.Ignore;
-import android.arch.persistence.room.Insert;
-import android.arch.persistence.room.Query;
+import androidx.lifecycle.LiveData;
+import androidx.room.Dao;
+import androidx.room.Ignore;
+import androidx.room.Insert;
+import androidx.room.Query;
 
 import java.util.List;
 
 import ua.pp.sanderzet.sanderdict.data.model.DictionaryModel;
-import ua.pp.sanderzet.sanderdict.data.model.FavoriteModel;
 
-import static android.arch.persistence.room.OnConflictStrategy.IGNORE;
+import static androidx.room.OnConflictStrategy.IGNORE;
 
 /**
  * Created by sander on 13.02.18.

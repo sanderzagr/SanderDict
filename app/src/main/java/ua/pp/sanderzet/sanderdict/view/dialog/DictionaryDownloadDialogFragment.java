@@ -3,8 +3,8 @@ package ua.pp.sanderzet.sanderdict.view.dialog;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.DialogFragment;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.DialogFragment;
 
 import ua.pp.sanderzet.sanderdict.R;
 

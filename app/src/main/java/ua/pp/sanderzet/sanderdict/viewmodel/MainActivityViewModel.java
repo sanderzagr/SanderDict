@@ -1,38 +1,31 @@
 package ua.pp.sanderzet.sanderdict.viewmodel;
 
 import android.app.Application;
-import android.arch.core.util.Function;
-import android.arch.lifecycle.AndroidViewModel;
-import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.MutableLiveData;
-import android.arch.lifecycle.Transformations;
+import androidx.arch.core.util.Function;
+import androidx.lifecycle.AndroidViewModel;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.Transformations;
 import android.content.Context;
 import android.os.Environment;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.SearchView;
-import android.util.Log;
+import androidx.annotation.NonNull;
+import androidx.appcompat.widget.SearchView;
 
 import java.io.File;
 import java.io.FilenameFilter;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 import androidx.work.Data;
 import androidx.work.OneTimeWorkRequest;
 import androidx.work.WorkInfo;
 import androidx.work.WorkManager;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
+
 import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 import ua.pp.sanderzet.sanderdict.SanderDictConstants;
 import ua.pp.sanderzet.sanderdict.data.model.DictionaryModel;
 import ua.pp.sanderzet.sanderdict.data.model.FavoriteModel;
-import ua.pp.sanderzet.sanderdict.data.model.DictionariesModel;
 import ua.pp.sanderzet.sanderdict.data.repository.DictionaryRepository;
-import ua.pp.sanderzet.sanderdict.data.repository.ListOfDictsApi;
 import ua.pp.sanderzet.sanderdict.data.util.DictToDbWorker;
 
 /**
@@ -68,39 +61,28 @@ public class MainActivityViewModel extends AndroidViewModel {
 
     final private MutableLiveData<FavoriteModel> unfoldedFavoriteWord = new MutableLiveData<>();
 
-    /*If we need to go back, for example, after removing word from favorite list*/
+    /*If we need to go back, for example, after removing a word from favorite list*/
     final private MutableLiveData<Boolean> backStack = new MutableLiveData<>();
 
 
     private final LiveData<DictionaryModel> wordFromAnotherApp = Transformations.switchMap(
-            queryFromAnotherApp, new Function<String, LiveData<DictionaryModel>>() {
-
-                @Override
-                public LiveData<DictionaryModel> apply(String input) {
+            queryFromAnotherApp, input -> {
                     String myInput = input.trim();
-                    Integer myInputLength = myInput.length();
+                    int myInputLength = myInput.length();
                     LiveData<List<DictionaryModel>> suggestedWords = dictionaryRepository.getSuggestedWords(input);
-                    LiveData<DictionaryModel> dictionaryModelLiveData = Transformations.map(suggestedWords,
-                            new Function<List<DictionaryModel>, DictionaryModel>() {
-                                @Override
-                                public DictionaryModel apply(List<DictionaryModel> dictionaryModels) {
-                                    if (dictionaryModels != null && !dictionaryModels.isEmpty()) {
-                                        return dictionaryModels.get(0);
-                                    } else {
+        return Transformations.map(suggestedWords, dictionaryModels ->
+                    {
+                        if (dictionaryModels != null && !dictionaryModels.isEmpty()) {
+                            return dictionaryModels.get(0);
+                        } else {
 
-                                        if (myInputLength > 0) {
-                                            setQueryFromAnotherApp(myInput.substring(0, myInputLength - 1));
-                                        }
-                                        return null;
-                                    }
-                                }
-
-                                ;
+                            if (myInputLength > 0) {
+                                setQueryFromAnotherApp(myInput.substring(0, myInputLength - 1));
+                            }
+                            return null;
+                        }
+                    });
                             });
-                    return dictionaryModelLiveData;
-                }
-            });
-
 
     public MainActivityViewModel(@NonNull Application application) {
         super(application);
@@ -216,7 +198,7 @@ public class MainActivityViewModel extends AndroidViewModel {
                 };
                 String[] filesName = dir.list(filenameFilter);
                 String filePath = dir.toString();
-//    If exist dir /SanderDict on external storage & in this dir exist one or more file .dsl.dz
+//    If exist dir /SanderDict on external storage & in this dir exist one or more file .dsl.gz
                 if (filesName != null && filesName.length != 0) {
 
 

@@ -1,25 +1,14 @@
 package ua.pp.sanderzet.sanderdict.data.repository;
 
 import android.app.Application;
-import android.arch.core.util.Function;
-import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.MutableLiveData;
-import android.arch.lifecycle.Transformations;
-import android.content.Context;
-import android.os.AsyncTask;
-import android.util.Log;
+import androidx.arch.core.util.Function;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.Transformations;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.util.List;
 
-import ua.pp.sanderzet.sanderdict.data.SanderDictProvider;
 import ua.pp.sanderzet.sanderdict.data.model.DictionaryModel;
-import ua.pp.sanderzet.sanderdict.data.util.DBFromAssetsLiveData;
 
 /**
  * Created by sander on 18.02.18.

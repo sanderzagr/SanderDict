@@ -1,7 +1,7 @@
 package ua.pp.sanderzet.sanderdict.data.util;
 
 import android.app.Application;
-import android.arch.lifecycle.LiveData;
+import androidx.lifecycle.LiveData;
 import android.os.AsyncTask;
 import android.util.Log;
 

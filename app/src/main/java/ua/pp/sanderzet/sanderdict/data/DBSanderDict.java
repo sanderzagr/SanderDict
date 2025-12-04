@@ -21,6 +21,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.Reader;
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -113,8 +114,10 @@ public class DBSanderDict {
 
     public SQLiteDatabase open(String dbPathName) {
         // Перевіряємо, чи немає вже екземпляра дбхелпера - курсорЛоадер може запускати кілька потоків.
-        // Якщо вже є - на тобі, отримуй існуючий, ні - то створимо.
-       if(mDBHelper == null) mDBHelper = new DBHelper(mCtx, dbPathName, null, DB_VERSION);
+        // Якщо вже є - викл,ні - то створимо.
+       if(mDBHelper != null)  mDBHelper.close();
+       mDBHelper = new DBHelper(mCtx, dbPathName, null, DB_VERSION);
+
         mDB = mDBHelper.getWritableDatabase();
 return mDB;
     }
@@ -150,20 +153,29 @@ public Cursor query(String[] projection, String selection){
         ContentValues cv = new ContentValues();
 /*    regexp  для обробки dsl
 //   p1 - [p] на <i>  и [/p] на </i>  - частини мови і інші скорочення на italics
-//   p2 - [Х] - все інше, що в квадратних скобках, нафіг.
-//   p3 -  \[ и  \] - міняємо на [<font color="#00ff00">  и </font>] відповідно - транскрипція
+//   p2 -  \[ и  \] - міняємо на [<font color="#00ff00">  и </font>] відповідно - транскрипція
+//   p4 - [s]00023.wav[/s] - викидаємо згадку голосового файла
+//   p7 - [Х] - все інше, що в квадратних скобках, нафіг.
+//
+//   p11 - {[']}я{[/']} - міняємо на &#x301; після знака - наголос
+//  p12 - { } - забираємо
 */
-        Pattern p1 = Pattern.compile("(\\[p\\])(.+?)(\\[\\/p])");
-        Pattern p2 = Pattern.compile("\\[.+?\\]");
-        Pattern p3 = Pattern.compile("(\\\\)(.+?)(\\\\\\])");
+        Pattern p1 = Pattern.compile("(\\[p\\])(.+?)(\\[\\/p\\])");
+     Pattern p2 = Pattern.compile("(\\\\)(\\[)(.+?)(\\\\)(\\])");
+     Pattern p4 = Pattern.compile("(\\[s\\])(.+?)(\\[\\/s\\])");
+     Pattern p7 = Pattern.compile("\\[[^<].+?\\]");
 
-        Matcher m;
-        boolean nextWord = false ;
+     Pattern p11 = Pattern.compile("(\\{\\['\\]\\})(.+?)(\\{\\[\\/'\\]\\})");
+     Pattern p12= Pattern.compile("(\\{)(.+?)(\\})");
+
+
+     Matcher m;
+        boolean nextWord = true ;
         try {
 //            AssetManager am = mCtx.getAssets();
 //            gz = new GZIPInputStream(am.open("databases/univer_en_uk.dsl.dz"));
             gz = new GZIPInputStream(new FileInputStream(archivedDict));
-            decoder = new InputStreamReader(gz, "UTF-16LE");
+            decoder = new InputStreamReader(gz, StandardCharsets.UTF_16LE);
             br = new BufferedReader(decoder);
 
 //            FragmentListSearch.mProgressDialog.setIndeterminate(false);
@@ -175,42 +187,77 @@ public Cursor query(String[] projection, String selection){
 */
 
             while ((line = br.readLine()) != null) {
+if(!line.isEmpty()) {
+//Слово
 
-//Перед новим словом
-                if (line.equals("\t")) {
-                    if (cv.containsKey(KEY_DATE)) {
-                        m = p1.matcher(lines);
-                        detail = m.replaceAll("<i>$2</i>");
-                        m = p2.matcher(detail);
-                        detail = m.replaceAll("");
-                        m = p3.matcher(detail);
-                        detail = m.replaceAll("[<font color=#008000>$2</font>]");
-                        cv.put(KEY_DETAILS, detail);
-                       mDB.insert(db_table, null, cv);
 
-                    }
-                    nextWord = true;
-                    lines.setLength(0);
-                }
+    if ( !line.startsWith("\t") && !line.startsWith("#") ){
+
+        if (cv.containsKey(KEY_DATE)) {
+            m = p1.matcher(lines);
+            detail = m.replaceAll("<i>$2</i>");
+
+            m = p2.matcher(detail);
+            detail = m.replaceAll("[<font color=#008000>$3</font>]");
+
+            m = p4.matcher(detail);
+            detail = m.replaceAll("");
+
+            m = p7.matcher(detail);
+            detail = m.replaceAll("");
+
+            cv.put(KEY_DETAILS, detail);
+            mDB.insert(db_table, null, cv);
+            lines.setLength(0);
+
+        }
+//                    nextWord = true;
+        m = p11.matcher(line);
+        line = m.replaceAll("$2&#x301;");
+        m = p12.matcher(line);
+        line = m.replaceAll("$2");
+
+
+        cv.put(KEY_DATE, line);
+    }
 //Дефінішн слова
-                else if (line.startsWith("\t")) {
-                    if (!nextWord) {
-                        lines.append(line).append("<br>");
-                    }
-                }
-// Слово
-                else {
-                    if (nextWord) {
-                        cv.put(KEY_DATE, line);
-                        nextWord = false;
-                    }
 
-                }
+    else if (line.startsWith("\t") && !line.equals("\t")) {
+
+        lines.append(line).append("<br>");
+
+    }
+// Слово
+  /*              else {
+                        nextWord = true;
+                    }
+*/
+}
+            }
+
+//            Кінець файла, записати останне слово в дб
+            if (cv.containsKey(KEY_DATE)) {
+                m = p1.matcher(lines);
+                detail = m.replaceAll("<i>$2</i>");
+
+                m = p2.matcher(detail);
+                detail = m.replaceAll("[<font color=#008000>$3</font>]");
+
+                m = p4.matcher(detail);
+                detail = m.replaceAll("");
+
+                m = p7.matcher(detail);
+                detail = m.replaceAll("");
+
+                cv.put(KEY_DETAILS, detail);
+                mDB.insert(db_table, null, cv);
+                lines.setLength(0);
             }
 
             gz.close();
             decoder.close();
             br.close();
+            mDB.close();
 close();
         } catch (IOException e) {
             e.printStackTrace();

@@ -1,19 +1,17 @@
 package ua.pp.sanderzet.sanderdict.view.adapter;
 
-import android.arch.lifecycle.ViewModelProviders;
-import android.support.v7.util.DiffUtil;
-import android.support.v7.widget.RecyclerView;
+import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.DiffUtil;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import java.util.List;
-import java.util.zip.Inflater;
 
 import ua.pp.sanderzet.sanderdict.R;
 import ua.pp.sanderzet.sanderdict.data.model.FavoriteModel;
-import ua.pp.sanderzet.sanderdict.data.util.DictionaryDiffCallback;
 import ua.pp.sanderzet.sanderdict.data.util.FavoriteDiffCallback;
 import ua.pp.sanderzet.sanderdict.viewmodel.MainActivityViewModel;
 

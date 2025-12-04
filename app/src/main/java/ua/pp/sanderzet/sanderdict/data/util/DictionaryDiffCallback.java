@@ -1,6 +1,6 @@
 package ua.pp.sanderzet.sanderdict.data.util;
 
-import android.support.v7.util.DiffUtil;
+import androidx.recyclerview.widget.DiffUtil;
 
 import java.util.List;
 

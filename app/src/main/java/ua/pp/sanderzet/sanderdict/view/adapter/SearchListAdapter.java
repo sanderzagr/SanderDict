@@ -1,20 +1,17 @@
 package ua.pp.sanderzet.sanderdict.view.adapter;
 
-import android.support.v7.util.DiffUtil;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.DiffUtil;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.List;
-import java.util.function.ToDoubleBiFunction;
 
 import ua.pp.sanderzet.sanderdict.R;
 import ua.pp.sanderzet.sanderdict.data.model.DictionaryModel;
 import ua.pp.sanderzet.sanderdict.data.util.DictionaryDiffCallback;
-import ua.pp.sanderzet.sanderdict.view.ui.FragmentListSearch;
 import ua.pp.sanderzet.sanderdict.viewmodel.MainActivityViewModel;
 
 /**

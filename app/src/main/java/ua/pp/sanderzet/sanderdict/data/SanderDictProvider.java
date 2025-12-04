@@ -10,13 +10,12 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.preference.PreferenceManager;
 import android.provider.BaseColumns;
-import android.support.v4.content.ContextCompat;
+import androidx.core.content.ContextCompat;
 import android.util.Log;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.Random;
-
 import ua.pp.sanderzet.sanderdict.SanderDictConstants;
 
 

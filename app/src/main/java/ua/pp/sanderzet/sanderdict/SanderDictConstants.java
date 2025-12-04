@@ -14,7 +14,7 @@ public final  class SanderDictConstants {
 
     public static final String KEY_FILES_TO_DB = "filesToDb";
     public static final String KEY_PATH_TO_DB = "pathToDb";
-    public static final String EXT_FILE_TO_DB = ".dsl.dz";
+    public static final String EXT_FILE_TO_DB = ".dsl.gz";
     private static final String DICT_LIST_URL = "http://sanderzet.pp.ua/sanderdict/dict/";
 
 
