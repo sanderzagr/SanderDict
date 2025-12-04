@@ -1,7 +1,7 @@
 package ua.pp.sanderzet.sanderdict.view.ui;
 
 import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProvider;
 import android.os.Build;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
@@ -12,6 +12,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
+import java.util.Objects;
 
 import ua.pp.sanderzet.sanderdict.R;
 import ua.pp.sanderzet.sanderdict.data.model.DictionaryModel;
@@ -56,24 +58,21 @@ public class FragmentWordUnfolded extends Fragment {
         word = rootView.findViewById(R.id.wordUnfolded);
         definition = rootView.findViewById(R.id.definitionUnfolded);
 ib_DoFavorite = rootView.findViewById(R.id.ib_DoFavorite);
-        mainActivityViewModel = ViewModelProviders.of(getActivity()).get(MainActivityViewModel.class);
-        favoriteListViewModel = ViewModelProviders.of(getActivity()).get(FavoriteListViewModel.class);
+        mainActivityViewModel = new ViewModelProvider(requireActivity()).get(MainActivityViewModel.class);
+        favoriteListViewModel = new ViewModelProvider(requireActivity()).get(FavoriteListViewModel.class);
 
-        mainActivityViewModel.getUnfoldedWord().observe(getActivity(), new Observer<DictionaryModel>() {
+        mainActivityViewModel.getUnfoldedWord().observe(requireActivity(), new Observer<DictionaryModel>() {
             @Override
             public void onChanged(@Nullable DictionaryModel dm ) {
                 dictionaryModel = dm;
+                assert dictionaryModel != null;
                 String word = dictionaryModel.getWord();
                 String definition = dictionaryModel.getDefinition();
                 if (word == null) word ="";
                 FragmentWordUnfolded.this.word.setText(word);
                 // З версіі N змінилася функція Html.fromHtml
                 // перевіряємо версію Андроїд для потрібної функції
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                    FragmentWordUnfolded.this.definition.setText(Html.fromHtml(definition, Html.FROM_HTML_MODE_COMPACT));
-                }
-                else {
-                    FragmentWordUnfolded.this.definition.setText(Html.fromHtml(definition));}
+                FragmentWordUnfolded.this.definition.setText(Html.fromHtml(definition, Html.FROM_HTML_MODE_COMPACT));
                 /*Inform favoriteListViewModel that search is done and we have new word*
                  */
                 favoriteListViewModel.searchIsDone(word, definition);
@@ -81,12 +80,13 @@ ib_DoFavorite = rootView.findViewById(R.id.ib_DoFavorite);
 
         });
 
-        favoriteListViewModel.getWordIsFavorite().observe(getActivity(), new Observer<Boolean>() {
+        favoriteListViewModel.getWordIsFavorite().observe(requireActivity(), new Observer<Boolean>() {
             @Override
             public void onChanged(@Nullable Boolean o) {
                 isFavorite = o;
-                if (isFavorite) ib_DoFavorite.setImageResource(R.drawable.ic_star_24dp);
-                else ib_DoFavorite.setImageResource(R.drawable.ic_star_border_24dp);
+                if (Boolean.TRUE.equals(isFavorite)) {
+                    ib_DoFavorite.setImageResource(R.drawable.ic_star_24dp);
+                } else ib_DoFavorite.setImageResource(R.drawable.ic_star_border_24dp);
             }
         });
 

@@ -1,7 +1,7 @@
 package ua.pp.sanderzet.sanderdict.view.ui;
 
 import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProvider;
 import android.net.Uri;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
@@ -88,11 +88,11 @@ Bundle args = new Bundle();
 
         LOG_TAG = SanderDictConstants.getLogTag();
         CONTENT_URI = SanderDictConstants.getContentUri();
-        FragmentActivity myActivity = getActivity();
+        FragmentActivity myActivity = requireActivity();
         recyclerView = rootView.findViewById(R.id.rv_search);
 
-        favoriteListViewModel = ViewModelProviders.of(myActivity).get(FavoriteListViewModel.class);
-        mainActivityViewModel = ViewModelProviders.of(myActivity).get(MainActivityViewModel.class);
+        favoriteListViewModel = new ViewModelProvider(myActivity).get(FavoriteListViewModel.class);
+        mainActivityViewModel = new ViewModelProvider(myActivity).get(MainActivityViewModel.class);
         mainActivityViewModel.getListSuggestedWords().observe(myActivity, new Observer<List<DictionaryModel>>() {
             @Override
             public void onChanged(@Nullable List<DictionaryModel> dictionaryModels) {

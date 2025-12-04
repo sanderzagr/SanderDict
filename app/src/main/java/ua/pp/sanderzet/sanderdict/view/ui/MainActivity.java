@@ -3,7 +3,7 @@ package ua.pp.sanderzet.sanderdict.view.ui;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProvider;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -70,16 +70,14 @@ private FragmentDictionaries fragmentDictionaries;
     SharedPreferences sp;
     MainActivityViewModel viewModel;
     private DrawerLayout mDrawerLayout;
-    private NavigationView mNavigationView;
     private ConstraintLayout constraintLayout;
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
 private Toolbar toolbar;
-private ActionBar actionBar;
-private LiveData<Boolean> searchViewHasFocus;
+    private LiveData<Boolean> searchViewHasFocus;
 
-  @Override
-    public void onBackPressed() {
+
+    public void onBackPressedDispatcher() {
 
       int count = getFragmentManager().getBackStackEntryCount();
 
@@ -102,10 +100,10 @@ private LiveData<Boolean> searchViewHasFocus;
         constraintLayout = findViewById(R.id.constraintLayout);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
- actionBar = getSupportActionBar();
+        ActionBar actionBar = getSupportActionBar();
 
         mDrawerLayout = findViewById(R.id.drawer_layout);
-        mNavigationView = findViewById(R.id.nav_view);
+        NavigationView mNavigationView = findViewById(R.id.nav_view);
         ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         mDrawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
@@ -135,7 +133,7 @@ private LiveData<Boolean> searchViewHasFocus;
         }
         else myQuery = savedInstanceState.getString(KEY_SEARCH);
 
-        viewModel = ViewModelProviders.of(this).get(MainActivityViewModel.class);
+        viewModel = new ViewModelProvider(this).get(MainActivityViewModel.class);
 
         viewModel.getWordFromAnotherApp().observe(this, new Observer<DictionaryModel>() {
     @Override

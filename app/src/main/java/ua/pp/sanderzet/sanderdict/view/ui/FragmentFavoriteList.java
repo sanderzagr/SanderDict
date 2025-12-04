@@ -1,7 +1,7 @@
 package ua.pp.sanderzet.sanderdict.view.ui;
 
 import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProvider;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -44,8 +44,8 @@ private List<FavoriteModel>  favoriteModels;
 
         recyclerView = rootView.findViewById(R.id.rv_favoriteList);
 
-        favoriteListViewModel = ViewModelProviders.of(getActivity()).get(FavoriteListViewModel.class);
-        mainActivityViewModel = ViewModelProviders.of(getActivity()).get(MainActivityViewModel.class);
+        favoriteListViewModel = new ViewModelProvider(requireActivity()).get(FavoriteListViewModel.class);
+        mainActivityViewModel = new ViewModelProvider(requireActivity()).get(MainActivityViewModel.class);
 
         favoriteListViewModel.getAllWords().observe(getActivity(), new Observer<List<FavoriteModel>>() {
             @Override

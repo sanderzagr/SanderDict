@@ -2,7 +2,7 @@ package ua.pp.sanderzet.sanderdict.view.ui;
 
 import android.app.AlertDialog;
 import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProvider;
 import android.content.DialogInterface;
 import android.os.Build;
 import android.os.Bundle;
@@ -81,21 +81,17 @@ AlertDialog alertDialog = builder.create();
 
 
 
-        favoriteListViewModel = ViewModelProviders.of(getActivity()).get(FavoriteListViewModel.class);
-        mainActivityViewModel = ViewModelProviders.of(getActivity()).get(MainActivityViewModel.class);
+        favoriteListViewModel = new ViewModelProvider(requireActivity()).get(FavoriteListViewModel.class);
+        mainActivityViewModel = new ViewModelProvider(requireActivity()).get(MainActivityViewModel.class);
 
-        mainActivityViewModel.getUnfoldedFavoriteWord().observe(getActivity(), new Observer<FavoriteModel>() {
+        mainActivityViewModel.getUnfoldedFavoriteWord().observe(requireActivity(), new Observer<FavoriteModel>() {
             @Override
             public void onChanged(@Nullable FavoriteModel fm) {
                 favoriteModel = fm;
                 if (favoriteModel.getWord() != null)
                 {
                     word.setText(favoriteModel.getWord());
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                        definition.setText(Html.fromHtml(favoriteModel.getDefinition(), Html.FROM_HTML_MODE_COMPACT));
-                    }
-                    else {
-                        definition.setText(Html.fromHtml(favoriteModel.getDefinition()));}
+                    definition.setText(Html.fromHtml(favoriteModel.getDefinition(), Html.FROM_HTML_MODE_COMPACT));
                 }
 
             }
