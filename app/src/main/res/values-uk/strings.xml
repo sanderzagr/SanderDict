@@ -2,6 +2,7 @@
 <resources>
     <string name="app_name">SanderDict</string>
     <string name="action_search">Пошук</string>
+    <string name="title_home">Домівка</string>
     <string name="action_settings">Налаштування</string>
     <string name="add_dictionary_from_dir">Додати словник з пристрою</string>
     <string name="add_dictionary_from_net">Додати словник з мережі</string>
@@ -25,6 +26,8 @@
     <string name="favorite">Вибрані</string>
     <string name="Add_dictionary_from_net">Додати словник з мережі</string>
     <string name="TypeThere">Введіть тут</string>
+    <string name="english_ukraine">Англо-Український</string>
+    <string name="downloaded">Завантажено</string>
     <string name="EN">Англійська</string>
     <string name="UA">Українська</string>
     <string name="RU">Російська</string>
@@ -34,4 +37,5 @@
     <string name="df_dictionary_activate">Активувати словник ?</string>
     <string name="Ok">Так</string>
     <string name="Cancel">Відмінити</string>
+    <string name="checked">Перевірено</string>
 </resources>

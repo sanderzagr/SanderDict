@@ -1,6 +1,6 @@
 package ua.pp.sanderzet.sanderdict.view.adapter;
 
-import androidx.lifecycle.ViewModelProviders;
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -46,8 +46,13 @@ private MainActivityViewModel mainActivityViewModel;
     }
 
     @Override
-    public void onBindViewHolder(FavoriteListAdapter.FavoriteViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull FavoriteViewHolder holder, int position) {
 
+    }
+
+    //@Override
+    public void onBindViewHolder(FavoriteListAdapter.FavoriteViewHolder holder) {
+int position = holder.getLayoutPosition();
 holder.favoriteItemWord.setText(favoriteModels.get(position).getWord());
 
         holder.favoriteItemWord.setOnClickListener(new View.OnClickListener() {
