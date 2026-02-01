@@ -1,0 +1,1795 @@
+Index: app/build.gradle.kts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\nplugins {\n    id(\"com.android.application\") version \"8.13.2\"\n    id(\"org.jetbrains.kotlin.android\") version \"2.3.0\"\n}\nkotlin {\n    compilerOptions {\n        optIn.add(\"kotlin.RequiresOptIn\")\n    }\n}\n\nandroid {\n    compileSdk = 36\n    defaultConfig {\n        applicationId = \"ua.pp.sanderzet.sanderdict\"\n        minSdk = 23\n        targetSdk = 36\n        versionCode = 1\n        versionName = \"1.0\"\n        testInstrumentationRunner = \"androidx.test.runner.AndroidJUnitRunner\"\n        vectorDrawables.useSupportLibrary = true\n        javaCompileOptions {\n            annotationProcessorOptions {\n            }\n        }\n    }\n    buildFeatures {\n        viewBinding = true\n        // or for data binding:\n        // dataBinding = true\n    }\n    buildTypes {\n        release {\n\n            productFlavors {\n            }\n            buildToolsVersion = \"31.0.0\"\n            namespace = \"ua.pp.sanderzet.sanderdict\"\n        }\n\n        dependencies {\n            implementation(\"androidx.appcompat:appcompat:1.7.1\")\n            implementation(\"androidx.constraintlayout:constraintlayout:2.2.1\")\n            androidTestImplementation(\"androidx.test.ext:junit:1.3.0\")\n            androidTestImplementation(\"androidx.test.espresso:espresso-core:3.7.0\")\n            implementation(\"com.google.android.material:material:1.13.0\")\n            implementation(\"io.reactivex.rxjava2:rxjava:2.2.21\")\n            implementation(\"io.reactivex.rxjava2:rxandroid:2.1.1\")\n            implementation(\"androidx.lifecycle:lifecycle-livedata-core:2.10.0\")\n            implementation(\"androidx.lifecycle:lifecycle-runtime:2.10.0\")\n            annotationProcessor(\"androidx.lifecycle:lifecycle-common:2.10.0\")\n            implementation(\"androidx.room:room-runtime:2.8.4\")\n            annotationProcessor(\"androidx.room:room-compiler:2.8.4\")\n            androidTestImplementation(\"androidx.room:room-testing:2.8.4\")\n            implementation(\"androidx.cardview:cardview:1.0.0\")\n            implementation(\"androidx.recyclerview:recyclerview:1.4.0\")\n            implementation(\"com.github.humazed:RoomAsset:v1.0\")\n            implementation(\"androidx.appcompat:appcompat:1.7.1\")\n            implementation(\"com.squareup.retrofit2:retrofit:3.0.0\")\n            implementation(\"com.squareup.retrofit2:converter-gson:3.0.0\")\n        }\n        compileOptions {\n            sourceCompatibility = JavaVersion.VERSION_17\n            targetCompatibility = JavaVersion.VERSION_17\n        }\n        buildToolsVersion = \"35.0.0\"\n        buildToolsVersion = \"36.1.0\"\n    }\n    compileOptions {\n        sourceCompatibility = JavaVersion.VERSION_17\n        targetCompatibility = JavaVersion.VERSION_17\n    }\n\n    buildToolsVersion = \"36.1.0\"\n\n\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/build.gradle.kts b/app/build.gradle.kts
+--- a/app/build.gradle.kts	(revision b041a7a417c1c8ae6fcdc25356d1fbd86ff90a21)
++++ b/app/build.gradle.kts	(date 1767937782003)
+@@ -13,7 +13,7 @@
+     compileSdk = 36
+     defaultConfig {
+         applicationId = "ua.pp.sanderzet.sanderdict"
+-        minSdk = 23
++        minSdk = 28
+         targetSdk = 36
+         versionCode = 1
+         versionName = "1.0"
+@@ -38,40 +38,40 @@
+             namespace = "ua.pp.sanderzet.sanderdict"
+         }
+ 
+-        dependencies {
+-            implementation("androidx.appcompat:appcompat:1.7.1")
+-            implementation("androidx.constraintlayout:constraintlayout:2.2.1")
+-            androidTestImplementation("androidx.test.ext:junit:1.3.0")
+-            androidTestImplementation("androidx.test.espresso:espresso-core:3.7.0")
+-            implementation("com.google.android.material:material:1.13.0")
+-            implementation("io.reactivex.rxjava2:rxjava:2.2.21")
+-            implementation("io.reactivex.rxjava2:rxandroid:2.1.1")
+-            implementation("androidx.lifecycle:lifecycle-livedata-core:2.10.0")
+-            implementation("androidx.lifecycle:lifecycle-runtime:2.10.0")
+-            annotationProcessor("androidx.lifecycle:lifecycle-common:2.10.0")
+-            implementation("androidx.room:room-runtime:2.8.4")
+-            annotationProcessor("androidx.room:room-compiler:2.8.4")
+-            androidTestImplementation("androidx.room:room-testing:2.8.4")
+-            implementation("androidx.cardview:cardview:1.0.0")
+-            implementation("androidx.recyclerview:recyclerview:1.4.0")
+-            implementation("com.github.humazed:RoomAsset:v1.0")
+-            implementation("androidx.appcompat:appcompat:1.7.1")
+-            implementation("com.squareup.retrofit2:retrofit:3.0.0")
+-            implementation("com.squareup.retrofit2:converter-gson:3.0.0")
+-        }
+-        compileOptions {
+-            sourceCompatibility = JavaVersion.VERSION_17
+-            targetCompatibility = JavaVersion.VERSION_17
+-        }
+-        buildToolsVersion = "35.0.0"
+-        buildToolsVersion = "36.1.0"
+-    }
+-    compileOptions {
+-        sourceCompatibility = JavaVersion.VERSION_17
+-        targetCompatibility = JavaVersion.VERSION_17
+-    }
+-
+-    buildToolsVersion = "36.1.0"
+-
+-
++
++        compileOptions {
++            sourceCompatibility = JavaVersion.VERSION_17
++            targetCompatibility = JavaVersion.VERSION_17
++        }
++        buildToolsVersion = "35.0.0"
++        buildToolsVersion = "36.1.0"
++    }
++    compileOptions {
++        sourceCompatibility = JavaVersion.VERSION_17
++        targetCompatibility = JavaVersion.VERSION_17
++    }
++
++    buildToolsVersion = "36.1.0"
++}
++dependencies {
++    implementation("androidx.appcompat:appcompat:1.7.1")
++    implementation("androidx.constraintlayout:constraintlayout:2.2.1")
++    androidTestImplementation("androidx.test.ext:junit:1.3.0")
++    androidTestImplementation("androidx.test.espresso:espresso-core:3.7.0")
++    implementation("com.google.android.material:material:1.13.0")
++    implementation("io.reactivex.rxjava2:rxjava:2.2.21")
++    implementation("io.reactivex.rxjava2:rxandroid:2.1.1")
++    implementation("androidx.lifecycle:lifecycle-livedata-core:2.10.0")
++    implementation("androidx.lifecycle:lifecycle-runtime:2.10.0")
++    annotationProcessor("androidx.lifecycle:lifecycle-common:2.10.0")
++    implementation("androidx.room:room-runtime:2.8.4")
++    annotationProcessor("androidx.room:room-compiler:2.8.4")
++    androidTestImplementation("androidx.room:room-testing:2.8.4")
++    implementation("androidx.cardview:cardview:1.0.0")
++    implementation("androidx.recyclerview:recyclerview:1.4.0")
++    implementation("com.github.humazed:RoomAsset:v1.0")
++    implementation("androidx.appcompat:appcompat:1.7.1")
++    implementation("com.squareup.retrofit2:retrofit:3.0.0")
++    implementation("com.squareup.retrofit2:converter-gson:3.0.0")
++    implementation("androidx.work:work-runtime:2.11.0")
+ }
+\ No newline at end of file
+Index: app/src/main/java/ua/pp/sanderzet/sanderdict/view/ui/MainActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package ua.pp.sanderzet.sanderdict.view.ui;\n\n\nimport androidx.lifecycle.LiveData;\nimport androidx.lifecycle.Observer;\nimport androidx.lifecycle.ViewModelProviders;\nimport android.content.Intent;\nimport android.content.SharedPreferences;\nimport android.graphics.Color;\nimport android.os.Bundle;\n\nimport androidx.annotation.NonNull;\nimport androidx.annotation.Nullable;\nimport androidx.constraintlayout.widget.ConstraintLayout;\nimport com.google.android.material.navigation.NavigationView;\nimport com.google.android.material.snackbar.Snackbar;\nimport androidx.core.app.ActivityCompat;\nimport androidx.fragment.app.FragmentManager;\nimport androidx.fragment.app.FragmentTransaction;\nimport androidx.core.content.ContextCompat;\nimport androidx.core.view.GravityCompat;\nimport androidx.drawerlayout.widget.DrawerLayout;\nimport androidx.appcompat.app.ActionBar;\nimport androidx.appcompat.app.ActionBarDrawerToggle;\nimport androidx.appcompat.app.AppCompatActivity;\nimport androidx.appcompat.widget.SearchView;\nimport androidx.appcompat.widget.Toolbar;\nimport android.view.Menu;\nimport android.view.MenuItem;\nimport android.view.View;\nimport android.view.inputmethod.EditorInfo;\n\nimport java.util.List;\n\nimport androidx.work.WorkInfo;\nimport ua.pp.sanderzet.sanderdict.SanderDictConstants;\nimport ua.pp.sanderzet.sanderdict.data.model.DictionaryModel;\nimport ua.pp.sanderzet.sanderdict.data.model.FavoriteModel;\nimport ua.pp.sanderzet.sanderdict.viewmodel.MainActivityViewModel;\nimport ua.pp.sanderzet.sanderdict.R;\n\nimport static com.google.android.material.snackbar.Snackbar.LENGTH_INDEFINITE;\nimport static com.google.android.material.snackbar.Snackbar.LENGTH_LONG;\n\n\npublic class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {\n\n\n    private String LOG_TAG;\n\n//    LifecycleRegistry lifecycleRegistry = new LifecycleRegistry(this);\n    private final String FTAG_LIST_SEARCH = \"fls\";\n    private final String FTAG_WORD_UNFOLDED = \"fwu\";\nprivate final String FTAG_FAVORITE_LIST = \"ffl\";\nprivate final String FTAG_FAVORITE_UNFOLDED = \"ffu\";\nprivate final String FTAG_DICTIONARIES = \"fd\";\n\nprivate final String KEY_SEARCH = \"key_search\";\n\n\n    private FragmentListSearch fragmentListSearch;\nprivate FragmentWordUnfolded fragmentWordUnfolded;\nprivate FragmentFavoriteList fragmentFavoriteList;\nprivate FragmentFavoriteWordUnfolded fragmentFavoriteWordUnfolded;\nprivate FragmentDictionaries fragmentDictionaries;\n\n    private SearchView searchView;\n    private MenuItem searchViewMenuItem;\n    private String myQuery ;\n    SharedPreferences sp;\n    MainActivityViewModel viewModel;\n    private DrawerLayout mDrawerLayout;\n    private NavigationView mNavigationView;\n    private ConstraintLayout constraintLayout;\n    private FragmentManager fragmentManager;\n    private FragmentTransaction fragmentTransaction;\nprivate Toolbar toolbar;\nprivate ActionBar actionBar;\nprivate LiveData<Boolean> searchViewHasFocus;\n\n  @Override\n    public void onBackPressed() {\n\n      int count = getFragmentManager().getBackStackEntryCount();\n\n      if (count == 0) {\n          super.onBackPressed();\n          //additional code\n      } else {\n          getFragmentManager().popBackStack();\n      }\n      //moveTaskToBack(true);\n\n\n  }\n\n    @Override\n    protected void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.drawer_main);\n        LOG_TAG = SanderDictConstants.getLogTag();\n        constraintLayout = findViewById(R.id.constraintLayout);\n        toolbar = findViewById(R.id.toolbar);\n        setSupportActionBar(toolbar);\n actionBar = getSupportActionBar();\n\n        mDrawerLayout = findViewById(R.id.drawer_layout);\n        mNavigationView = findViewById(R.id.nav_view);\n        ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);\n        mDrawerLayout.addDrawerListener(actionBarDrawerToggle);\n        actionBarDrawerToggle.syncState();\n        mNavigationView.setNavigationItemSelectedListener(this);\n\n        fragmentManager = getSupportFragmentManager();\n        fragmentWordUnfolded = new FragmentWordUnfolded();\n        fragmentListSearch = new FragmentListSearch();\n        fragmentFavoriteList = new FragmentFavoriteList();\n        fragmentFavoriteWordUnfolded = new FragmentFavoriteWordUnfolded();\n        fragmentDictionaries = new FragmentDictionaries();\n\n\n\n\n\n        if (savedInstanceState == null) {\n\n           /* fragmentTransaction = fragmentManager.beginTransaction();\n            fragmentTransaction.replace(R.id.frameLayout, fragmentListSearch, FTAG_LIST_SEARCH).\n                    addToBackStack(null).commit();\n*/\n            // sp = PreferenceManager.getDefaultSharedPreferences(this);\n            // sp.edit().putString(\"dict_now\", \"\").apply();\n        myQuery = \"\";\n\n        }\n        else myQuery = savedInstanceState.getString(KEY_SEARCH);\n\n        viewModel = ViewModelProviders.of(this).get(MainActivityViewModel.class);\n\n        viewModel.getWordFromAnotherApp().observe(this, new Observer<DictionaryModel>() {\n    @Override\n    public void onChanged(@Nullable DictionaryModel dictionaryModel) {\n        if (dictionaryModel != null) viewModel.setUnfoldedWord(dictionaryModel);\n    }\n});\n\n        viewModel.getUnfoldedWord().observe(this, new Observer<DictionaryModel>() {\n            @Override\n            public void onChanged(@Nullable DictionaryModel dictionaryModel) {\n                viewModel.setQuery(dictionaryModel.getWord());\n   if (searchView != null) {\n       searchView.setQuery(dictionaryModel.getWord(), true);\n\n\n       //                Remove focus from searchView (if we are sent to it from other app,\n//                then we can tap Back only one for returning to sending app, but if\n//                we have focus on searchView, we can tap Back twice.\n//constraintLayout.requestFocus();\n       searchView.clearFocus();\n   }\n                    fragmentManager.beginTransaction().replace(R.id.frameLayout, fragmentWordUnfolded, FTAG_WORD_UNFOLDED).\n                commit();\n\n// Snackbar.make(constraintLayout, \"New FragmentSearch\", Snackbar.LENGTH_SHORT).show();\n            }\n        });\n\n\n        /*For Worker during import file to db dictionary*/\n\n        viewModel.getWorkerToDbInfo().observe(this, new Observer<List<WorkInfo>>() {\n            @Override\n            public void onChanged(@Nullable List<WorkInfo> workInfos) {\n                if (workInfos == null || workInfos.isEmpty()) {\n                    return;\n\n                }\n                WorkInfo workInfo = workInfos.get(0);\n                boolean finished = workInfo.getState().isFinished();\n                if (!finished) {\n\n                } else {\n                    Snackbar.make(constraintLayout, \"DB imported successfully !\", Snackbar.LENGTH_LONG).show();\n                }\n            }\n        });\n\n\n        /*If we need to go back, for example, after removing word from favorite list*/\n\n        viewModel.getBackStack().observe(this, new Observer<Boolean>() {\n            @Override\n            public void onChanged(@Nullable Boolean aBoolean) {\n                if (aBoolean == true) {\n                    fragmentManager.popBackStack();\n                    viewModel.setBackStack(false);\n                }\n            }\n        });\n\n//Unfold favorite word\n        viewModel.getUnfoldedFavoriteWord().observe(this, new Observer<FavoriteModel>() {\n            @Override\n            public void onChanged(@Nullable FavoriteModel favoriteModel) {\n                    fragmentManager.beginTransaction().replace(R.id.frameLayout, fragmentFavoriteWordUnfolded, FTAG_FAVORITE_UNFOLDED).\n                   addToBackStack(null).commit();\n                            }\n        });\n\nviewModel.getMessageForUser().observe(this, new Observer<String>() {\n    @Override\n    public void onChanged(@Nullable String s) {\n        Snackbar.make(constraintLayout, s, Snackbar.LENGTH_SHORT).show();\n    }\n});\n\n\n\n        //Searching from other app\n        Intent intent = getIntent();\n        String action = intent.getAction();\n        String type = intent.getType();\n        if (Intent.ACTION_SEND.equals(action) && \"text/plain\".equals(type)) {\n            handleIntent(intent);\n        }\n\n    }\n\n//End onCreate\n\n\n\n\n    @Override\n    public boolean onCreateOptionsMenu(Menu menu) {\n        // Inflate the menu; this adds items to the action bar if it is present.\n        getMenuInflater().inflate(R.menu.menu_main, menu);\nsearchViewMenuItem = menu.findItem(R.id.action_search);\n        searchView = (SearchView) searchViewMenuItem.getActionView();\n\nsearchView.setSaveEnabled(true);\nsearchView.setQueryHint(getString(R.string.hint));\nsearchView.setBackgroundColor(Color.WHITE);\n        searchView.setIconifiedByDefault(false);\n        searchView.setSubmitButtonEnabled(false);\n        searchView.setOnQueryTextListener(onQueryTextListener);\n        searchView.setOnQueryTextFocusChangeListener(onFocusChangeListener);\n//         To avoid having fullscreen keyboard editing on landscape in order to access to the suggestions\n        int options = searchView.getImeOptions();\n        searchView.setImeOptions(options| EditorInfo.IME_FLAG_NO_EXTRACT_UI);\nsearchView.setQuery(myQuery,false);\n\n        return super.onCreateOptionsMenu(menu);\n    }\n\n\n    private SearchView.OnCloseListener onCloseListener =\n            new SearchView.OnCloseListener() {\n                @Override\n                public boolean onClose() {\n            viewModel.setQuery(\"\");\n                    return true;\n                }\n            };\n\n    private SearchView.OnQueryTextListener onQueryTextListener =\n            new SearchView.OnQueryTextListener() {\n                @Override\n                public boolean onQueryTextSubmit(String query) {\n                    return false;\n                }\n\n                @Override\n                public boolean onQueryTextChange(String query) {\n\n\n                    if (!fragmentListSearch.isAdded()) {\n                        fragmentManager.beginTransaction().\n                                replace(R.id.frameLayout, fragmentListSearch, FTAG_LIST_SEARCH).\n                        commit();\n                    }\n\n                    viewModel.setQuery(query);\n                    return true;\n                }\n\n            };\n\n\n    private SearchView.OnFocusChangeListener onFocusChangeListener =\n            new SearchView.OnFocusChangeListener() {\n                @Override\n                public void onFocusChange(View v, boolean hasFocus) {\n                    if (hasFocus) {\n                        if (!fragmentListSearch.isAdded()) {\n\n                        }\n                        Snackbar.make(constraintLayout, \"FragmentListSearch Is added = \" + fragmentListSearch.isAdded(), LENGTH_LONG).show();\n                    }\n                                    }\n            };\n\n    @Override\n    protected void onSaveInstanceState(Bundle outState) {\n        super.onSaveInstanceState(outState);\noutState.putString(KEY_SEARCH, searchView.getQuery().toString());    }\n\n    @Override\n    protected void onRestoreInstanceState(Bundle savedInstanceState) {\n        super.onRestoreInstanceState(savedInstanceState);\n\n//        searchView = viewModel.retainSearchView();\n    }\n\n    @Override\n\n    public boolean onOptionsItemSelected(MenuItem item) {\n        // Handle action bar item clicks here. The action bar will\n        // automatically handle clicks on the Home/Up button, so long\n        // as you specify a parent activity in AndroidManifest.xml.\n        int id = item.getItemId();\n//We in menu so no FABFavoriteAdd\n        viewModel.setIsActiveFabFavoriteAdd(false);\n        switch (id) {\n            case R.id.my_add_dict_from_dir:\n\n\n                viewModel.addDictFromDir();\n\n\n\n                return true;\n            case R.id.my_add_dict_from_net:\n                Snackbar.make(constraintLayout, R.string.Add_dictionary_from_net, Snackbar.LENGTH_LONG).show();\n\n//            Toast.makeText(this, R.string.add_dictionary_from_net, Toast.LENGTH_LONG).show();\n\n\n                return true;\n            case R.id.action_settings:\n                return true;\n        }\n        return super.onOptionsItemSelected(item);\n    }\n\n\n    @Override\n    protected void onDestroy() {\n        super.onDestroy();\n    }\n\n\n\n\n    @Override\n    public boolean onNavigationItemSelected(@NonNull MenuItem item) {\nint id = item.getItemId();\n        switch (id) {\n            case R.id.drawer_item_favorite:\n\n           showFavorite();\n               break;\n            case R.id.drawer_item_dictionaries:\n\n                showDictionaries();\n\nbreak;\n        }\n        mDrawerLayout.closeDrawer(GravityCompat.START);\n        toolbar.setTitle(item.getTitle());\n        searchView.clearFocus();\n        searchViewMenuItem.collapseActionView();\n//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);\n\n        return true;\n    }\n\n    public void showFavorite () {\n           fragmentManager.beginTransaction().replace(R.id.frameLayout, fragmentFavoriteList, FTAG_FAVORITE_LIST).\n                    commit();\n\n    }\n\n    public void showDictionaries() {\n            fragmentManager.beginTransaction().replace(R.id.frameLayout, fragmentDictionaries, FTAG_DICTIONARIES).\n                    commit();\n\n\n    }\n\n    private void handleIntent(Intent intent) {\n        String sharedText = intent.getStringExtra(Intent.EXTRA_TEXT);\nviewModel.setQueryFromAnotherApp(sharedText);\n//        if (sharedText != null) {searchView.setQuery(sharedText.trim(), true);}\n    }\n\n}\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/ua/pp/sanderzet/sanderdict/view/ui/MainActivity.java b/app/src/main/java/ua/pp/sanderzet/sanderdict/view/ui/MainActivity.java
+--- a/app/src/main/java/ua/pp/sanderzet/sanderdict/view/ui/MainActivity.java	(revision b041a7a417c1c8ae6fcdc25356d1fbd86ff90a21)
++++ b/app/src/main/java/ua/pp/sanderzet/sanderdict/view/ui/MainActivity.java	(date 1768495533226)
+@@ -3,7 +3,7 @@
+ 
+ import androidx.lifecycle.LiveData;
+ import androidx.lifecycle.Observer;
+-import androidx.lifecycle.ViewModelProviders;
++import androidx.lifecycle.ViewModelProvider;
+ import android.content.Intent;
+ import android.content.SharedPreferences;
+ import android.graphics.Color;
+@@ -78,8 +78,8 @@
+ private ActionBar actionBar;
+ private LiveData<Boolean> searchViewHasFocus;
+ 
+-  @Override
+-    public void onBackPressed() {
++
++    public void onBackPressedDispatcher() {
+ 
+       int count = getFragmentManager().getBackStackEntryCount();
+ 
+@@ -135,7 +135,7 @@
+         }
+         else myQuery = savedInstanceState.getString(KEY_SEARCH);
+ 
+-        viewModel = ViewModelProviders.of(this).get(MainActivityViewModel.class);
++        viewModel = new ViewModelProvider(this).get(MainActivityViewModel.class);
+ 
+         viewModel.getWordFromAnotherApp().observe(this, new Observer<DictionaryModel>() {
+     @Override
+Index: app/src/main/java/ua/pp/sanderzet/sanderdict/view/ui/FragmentFavoriteList.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package ua.pp.sanderzet.sanderdict.view.ui;\n\nimport androidx.lifecycle.Observer;\nimport androidx.lifecycle.ViewModelProviders;\nimport android.os.Bundle;\nimport androidx.annotation.Nullable;\nimport androidx.fragment.app.Fragment;\nimport androidx.recyclerview.widget.LinearLayoutManager;\nimport androidx.recyclerview.widget.RecyclerView;\nimport android.view.LayoutInflater;\nimport android.view.View;\nimport android.view.ViewGroup;\n\nimport java.util.List;\n\nimport ua.pp.sanderzet.sanderdict.R;\nimport ua.pp.sanderzet.sanderdict.data.model.FavoriteModel;\nimport ua.pp.sanderzet.sanderdict.view.adapter.FavoriteListAdapter;\nimport ua.pp.sanderzet.sanderdict.viewmodel.FavoriteListViewModel;\nimport ua.pp.sanderzet.sanderdict.viewmodel.MainActivityViewModel;\n\n/**\n * Created by sander on 31.10.17.\n */\n\npublic class FragmentFavoriteList extends Fragment {\n    private FavoriteListViewModel favoriteListViewModel;\n    private MainActivityViewModel mainActivityViewModel;\nprivate List<FavoriteModel>  favoriteModels;\n    private View rootView;\n    private RecyclerView recyclerView;\n    private FavoriteListAdapter favoriteListAdapter;\n\n    @Nullable\n    @Override\n    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {\n        rootView = inflater.inflate(R.layout.favorite_list, container, false);\n        return rootView;\n    }\n\n    @Override\n    public void onActivityCreated(@Nullable Bundle savedInstanceState) {\n        super.onActivityCreated(savedInstanceState);\n\n        recyclerView = rootView.findViewById(R.id.rv_favoriteList);\n\n        favoriteListViewModel = ViewModelProviders.of(getActivity()).get(FavoriteListViewModel.class);\n        mainActivityViewModel = ViewModelProviders.of(getActivity()).get(MainActivityViewModel.class);\n\n        favoriteListViewModel.getAllWords().observe(getActivity(), new Observer<List<FavoriteModel>>() {\n            @Override\n            public void onChanged(@Nullable List<FavoriteModel> favoriteModels) {\n                if (recyclerView.getAdapter() == null) {\n                    favoriteListAdapter = new FavoriteListAdapter(favoriteModels, mainActivityViewModel);\n                    recyclerView.setAdapter(favoriteListAdapter);\n                    recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));\n                }\n                else favoriteListAdapter.updateList(favoriteModels);\n            }\n        });\n\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/ua/pp/sanderzet/sanderdict/view/ui/FragmentFavoriteList.java b/app/src/main/java/ua/pp/sanderzet/sanderdict/view/ui/FragmentFavoriteList.java
+--- a/app/src/main/java/ua/pp/sanderzet/sanderdict/view/ui/FragmentFavoriteList.java	(revision b041a7a417c1c8ae6fcdc25356d1fbd86ff90a21)
++++ b/app/src/main/java/ua/pp/sanderzet/sanderdict/view/ui/FragmentFavoriteList.java	(date 1768031241372)
+@@ -1,7 +1,7 @@
+ package ua.pp.sanderzet.sanderdict.view.ui;
+ 
+ import androidx.lifecycle.Observer;
+-import androidx.lifecycle.ViewModelProviders;
++import androidx.lifecycle.ViewModelProvider;
+ import android.os.Bundle;
+ import androidx.annotation.Nullable;
+ import androidx.fragment.app.Fragment;
+@@ -44,8 +44,8 @@
+ 
+         recyclerView = rootView.findViewById(R.id.rv_favoriteList);
+ 
+-        favoriteListViewModel = ViewModelProviders.of(getActivity()).get(FavoriteListViewModel.class);
+-        mainActivityViewModel = ViewModelProviders.of(getActivity()).get(MainActivityViewModel.class);
++        favoriteListViewModel = new ViewModelProvider(requireActivity()).get(FavoriteListViewModel.class);
++        mainActivityViewModel = new ViewModelProvider(requireActivity()).get(MainActivityViewModel.class);
+ 
+         favoriteListViewModel.getAllWords().observe(getActivity(), new Observer<List<FavoriteModel>>() {
+             @Override
+Index: app/src/main/java/ua/pp/sanderzet/sanderdict/view/ui/FragmentListSearch.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package ua.pp.sanderzet.sanderdict.view.ui;\n\nimport androidx.lifecycle.Observer;\nimport androidx.lifecycle.ViewModelProviders;\nimport android.net.Uri;\nimport android.os.Bundle;\nimport androidx.annotation.NonNull;\nimport androidx.annotation.Nullable;\nimport com.google.android.material.floatingactionbutton.FloatingActionButton;\nimport androidx.fragment.app.Fragment;\nimport androidx.fragment.app.FragmentActivity;\nimport androidx.recyclerview.widget.LinearLayoutManager;\nimport androidx.recyclerview.widget.RecyclerView;\nimport android.view.LayoutInflater;\nimport android.view.View;\nimport android.view.ViewGroup;\nimport android.widget.ImageButton;\nimport android.widget.ListView;\n\nimport java.util.List;\n\nimport ua.pp.sanderzet.sanderdict.data.model.DictionaryModel;\nimport ua.pp.sanderzet.sanderdict.view.adapter.SearchListAdapter;\nimport ua.pp.sanderzet.sanderdict.viewmodel.FavoriteListViewModel;\nimport ua.pp.sanderzet.sanderdict.R;\nimport ua.pp.sanderzet.sanderdict.SanderDictConstants;\nimport ua.pp.sanderzet.sanderdict.viewmodel.MainActivityViewModel;\n\n/**\n * A placeholder fragment containing a simple view.\n */\n\npublic class FragmentListSearch extends Fragment {\n\n\n    private static final String QUERY_EXTRA_KEY = \"QUERY_EXTRA_KEY\";\n    private static final String QUERY_URI = \"QUERY_URI\";\nprivate static  String LOG_TAG;\nprivate static Uri CONTENT_URI;\nprivate String word;\nprivate String definition;\nprivate View rootView;\nprivate ListView listView;\n\n\nprivate RecyclerView recyclerView;\nprivate SearchListAdapter rvAdapter;\n\n    private FavoriteListViewModel favoriteListViewModel;\n    private MainActivityViewModel mainActivityViewModel;\n\n\n\n\n    private FloatingActionButton addWordToFavoriteFloatingActionButton;\nprivate ImageButton ib_Favorite;\n/*\npublic static FragmentListSearch newInstance  (String query){\n    FragmentListSearch fragmentListSearch = new FragmentListSearch();\nBundle args = new Bundle();\n     args.putString(\"query\", query);\n     fragmentListSearch.setArguments(args);\n    return fragmentListSearch;\n}\n*/\n\n\n    @Override\n    public void onCreate(@Nullable Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        setRetainInstance(true);\n    }\n\n    @Override\n    public View onCreateView(LayoutInflater inflater, ViewGroup container,\n                             Bundle savedInstanceState) {\n       rootView = inflater.inflate(R.layout.frag_list_search, container, false);\n//              addWordToFavoriteFloatingActionButton = rootView.findViewById(R.id.fab);\n//       listView = rootView.findViewById(R.id.listView);\n//ib_Favorite = rootView.findViewById(R.id.ib_Favorite);\n       return rootView;\n\n   }\n\n    @Override\n    public void onActivityCreated(Bundle savedInstanceState) {\n        super.onActivityCreated(savedInstanceState);\n\n        LOG_TAG = SanderDictConstants.getLogTag();\n        CONTENT_URI = SanderDictConstants.getContentUri();\n        FragmentActivity myActivity = getActivity();\n        recyclerView = rootView.findViewById(R.id.rv_search);\n\n        favoriteListViewModel = ViewModelProviders.of(myActivity).get(FavoriteListViewModel.class);\n        mainActivityViewModel = ViewModelProviders.of(myActivity).get(MainActivityViewModel.class);\n        mainActivityViewModel.getListSuggestedWords().observe(myActivity, new Observer<List<DictionaryModel>>() {\n            @Override\n            public void onChanged(@Nullable List<DictionaryModel> dictionaryModels) {\n                if  (recyclerView.getAdapter() == null){\n                    rvAdapter = new SearchListAdapter(dictionaryModels, mainActivityViewModel);\n                    recyclerView.setAdapter(rvAdapter);\n                    recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));\n\n                } else {\n                    rvAdapter.updateList(dictionaryModels);\n\n                }\n\n            }\n        });\n\n\n\n\n\n    }\n\n\n     /*   // Створюємо адаптер і настроюємо список\n        String[] from = new String[] {SearchManager.SUGGEST_COLUMN_TEXT_1, DBSanderDict.KEY_DETAILS};\n        int[] to = new int[] {R.id.tv_word, R.id.tv_definition};\n        scAdapter = new SimpleCursorAdapter(getActivity(), R.layout.items, null, from, to, 0){\n            @Override\n            public void setViewText(TextView v, String text) {\n                if (v.getId() == R.id.tv_definition) {\n\n                    // З версіі N змінилася функція Html.fromHtml\n                    // перевіряємо версію Андроїд для потрібної функції\n                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {\n                        v.setText(Html.fromHtml(text, Html.FROM_HTML_MODE_LEGACY));}\n                    else {v.setText(Html.fromHtml(text));}\n                }\n                else\n                super.setViewText(v, text);\n            }\n        };\n\n\nlistView.setAdapter(scAdapter);*/\n// Створюємо курсор-лоадер\n\n/*\n                getLoaderManager().initLoader(0,null,  this);\n\n    }\n\n    @Override\n    public void onResume() {\n        super.onResume();\n        Bundle args = new Bundle();\nIntent intent = getActivity().getIntent();\n        if (Intent.ACTION_SEARCH.equals(intent.getAction())){\n            //handle a search query\n            String searchQuery = intent.getStringExtra(SearchManager.QUERY);\n            args.putString(QUERY_EXTRA_KEY, searchQuery);\n            getLoaderManager().restartLoader(0, args, this);\n\n        }\n        else if (Intent.ACTION_VIEW.equals(intent.getAction())) {\n            //handles a click on a search suggestion; showing word\n           Uri uri = intent.getData();\n            args.putString(QUERY_URI, uri.toString());\n            Log.d(LOG_TAG, uri.toString());\n            getLoaderManager().restartLoader(0, args, this);\n\n        }\n    }\n\n    @Override\n    public CursorLoader onCreateLoader(int id, Bundle args) {\n        if (args != null) {\n            if (args.containsKey(QUERY_EXTRA_KEY)) {\n                String query = args.getString(QUERY_EXTRA_KEY);\n                return new CursorLoader(getActivity(),\n                        CONTENT_URI,\n                        null,\n                        null,\n                        new String[]{query},\n                        null\n                );\n            } else if (args.containsKey(QUERY_URI)) {\n                Log.d(LOG_TAG, \"ggg\");\n                                return new CursorLoader( getActivity(), Uri.parse(args.getString(QUERY_URI)), null, null, null, null);\n            }\n        }\n        Log.d(LOG_TAG, \"First on create loader\");\n\n\n        return new CursorLoader(getActivity(), CONTENT_URI, null, null,  null, null);\n    }\n\n\n\n    @Override\n    public void onLoadFinished(Loader<Cursor> loader, Cursor data) {\n\n        scAdapter.swapCursor(data);\n        if(data.moveToFirst()) {\n            word = data.getString(data.getColumnIndex(SearchManager.SUGGEST_COLUMN_TEXT_1));\n            definition = data.getString(data.getColumnIndex(DBSanderDict.KEY_DETAILS));\n            if (!word.isEmpty() && !definition.isEmpty())\n                try {\n                    favoriteListViewModel.searchIsDone(word, definition);            //            Snackbar.make(rootView, word + \" /n\" + definition, Snackbar.LENGTH_LONG).show();\n                } catch (Exception e) {\n                    e.printStackTrace();\n                }\n        }\n\n    }\n\n    @Override\n    public void onLoaderReset(Loader<Cursor> loader) {\nscAdapter.swapCursor(null);\n    }\n\n    @Override\n    public void onDestroy() {\n        super.onDestroy();\ngetLoaderManager().destroyLoader(0);\n    }\n\n*/\n//\n//    @Override\n//    public LifecycleRegistry getLifecycle() {\n//        return lifecycleRegistry;\n//    }\n}\n\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/ua/pp/sanderzet/sanderdict/view/ui/FragmentListSearch.java b/app/src/main/java/ua/pp/sanderzet/sanderdict/view/ui/FragmentListSearch.java
+--- a/app/src/main/java/ua/pp/sanderzet/sanderdict/view/ui/FragmentListSearch.java	(revision b041a7a417c1c8ae6fcdc25356d1fbd86ff90a21)
++++ b/app/src/main/java/ua/pp/sanderzet/sanderdict/view/ui/FragmentListSearch.java	(date 1767937782125)
+@@ -1,7 +1,7 @@
+ package ua.pp.sanderzet.sanderdict.view.ui;
+ 
+ import androidx.lifecycle.Observer;
+-import androidx.lifecycle.ViewModelProviders;
++import androidx.lifecycle.ViewModelProvider;
+ import android.net.Uri;
+ import android.os.Bundle;
+ import androidx.annotation.NonNull;
+@@ -88,11 +88,11 @@
+ 
+         LOG_TAG = SanderDictConstants.getLogTag();
+         CONTENT_URI = SanderDictConstants.getContentUri();
+-        FragmentActivity myActivity = getActivity();
++        FragmentActivity myActivity = requireActivity();
+         recyclerView = rootView.findViewById(R.id.rv_search);
+ 
+-        favoriteListViewModel = ViewModelProviders.of(myActivity).get(FavoriteListViewModel.class);
+-        mainActivityViewModel = ViewModelProviders.of(myActivity).get(MainActivityViewModel.class);
++        favoriteListViewModel = new ViewModelProvider(myActivity).get(FavoriteListViewModel.class);
++        mainActivityViewModel = new ViewModelProvider(myActivity).get(MainActivityViewModel.class);
+         mainActivityViewModel.getListSuggestedWords().observe(myActivity, new Observer<List<DictionaryModel>>() {
+             @Override
+             public void onChanged(@Nullable List<DictionaryModel> dictionaryModels) {
+Index: settings.gradle.kts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>include (\":app\")\npluginManagement {\n    repositories {\n        google() // Required for Android Gradle Plugin (AGP)\n        mavenCentral()\n        gradlePluginPortal() // Default source for most other plugins\n    }\n}\ndependencyResolutionManagement { // <-- ADD THIS BLOCK HERE\n    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)\n    repositories {\n        google()\n        mavenCentral()\n    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/settings.gradle.kts b/settings.gradle.kts
+--- a/settings.gradle.kts	(revision b041a7a417c1c8ae6fcdc25356d1fbd86ff90a21)
++++ b/settings.gradle.kts	(date 1767937782241)
+@@ -4,6 +4,8 @@
+         google() // Required for Android Gradle Plugin (AGP)
+         mavenCentral()
+         gradlePluginPortal() // Default source for most other plugins
++        // Add JitPack here (optional for plugins, but harmless)
++        maven("https://jitpack.io")
+     }
+ }
+ dependencyResolutionManagement { // <-- ADD THIS BLOCK HERE
+@@ -11,5 +13,7 @@
+     repositories {
+         google()
+         mavenCentral()
++        // *** CRUCIAL FIX: Add JitPack repository here ***
++        maven("https://jitpack.io")
+     }
+ }
+\ No newline at end of file
+Index: app/src/main/java/ua/pp/sanderzet/sanderdict/view/ui/FragmentFavoriteWordUnfolded.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package ua.pp.sanderzet.sanderdict.view.ui;\n\nimport android.app.AlertDialog;\nimport androidx.lifecycle.Observer;\nimport androidx.lifecycle.ViewModelProviders;\nimport android.content.DialogInterface;\nimport android.os.Build;\nimport android.os.Bundle;\nimport androidx.annotation.Nullable;\nimport androidx.fragment.app.Fragment;\nimport android.text.Html;\nimport android.view.LayoutInflater;\nimport android.view.View;\nimport android.view.ViewGroup;\nimport android.widget.ImageButton;\nimport android.widget.TextView;\n\nimport ua.pp.sanderzet.sanderdict.R;\nimport ua.pp.sanderzet.sanderdict.data.model.FavoriteModel;\nimport ua.pp.sanderzet.sanderdict.viewmodel.FavoriteListViewModel;\nimport ua.pp.sanderzet.sanderdict.viewmodel.MainActivityViewModel;\n\npublic class FragmentFavoriteWordUnfolded extends Fragment {\n\n    private View rootView;\n    private MainActivityViewModel mainActivityViewModel;\n    private FavoriteListViewModel favoriteListViewModel;\n    private TextView word;\n    private TextView definition;\n    private ImageButton ib_DoFavorite;\n    private Boolean isFavorite;\n    private FavoriteModel favoriteModel;\n\n    @Override\n    public void onCreate(@Nullable Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        setRetainInstance(true);\n    }\n\n    @Nullable\n    @Override\n    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {\n        rootView = inflater.inflate(R.layout.favorite_word_unfolded, container, false);\n        return rootView;\n            }\n\n    @Override\n    public void onActivityCreated(@Nullable Bundle savedInstanceState) {\n        super.onActivityCreated(savedInstanceState);\n        word = rootView.findViewById(R.id.fwordUnfolded);\n        definition = rootView.findViewById(R.id.fdefinitionUnfolded);\n        ib_DoFavorite = rootView.findViewById(R.id.ib_FDoFavorite);\n\n\n//       Building of dialog window\nAlertDialog.Builder builder = new AlertDialog.Builder(getActivity());\nbuilder.setMessage(\"Remove the word from favorite ?\");\n\nbuilder.setPositiveButton(\"Ok\", new DialogInterface.OnClickListener(){\n    @Override\n    public void onClick(DialogInterface dialog, int which) {\n        try {\n            favoriteListViewModel.removeWordFromFavorite(favoriteModel);\n        } catch (Exception e) {\n            e.printStackTrace();\n        }\n//    Must back to favorite list\n        mainActivityViewModel.setBackStack(true);\n    }\n});\nbuilder.setNegativeButton(\"Cancel\", new DialogInterface.OnClickListener() {\n    @Override\n    public void onClick(DialogInterface dialog, int which) {\n\n    }\n});\nAlertDialog alertDialog = builder.create();\n\n///*End of building dialog window*//*\n\n\n\n\n        favoriteListViewModel = ViewModelProviders.of(getActivity()).get(FavoriteListViewModel.class);\n        mainActivityViewModel = ViewModelProviders.of(getActivity()).get(MainActivityViewModel.class);\n\n        mainActivityViewModel.getUnfoldedFavoriteWord().observe(getActivity(), new Observer<FavoriteModel>() {\n            @Override\n            public void onChanged(@Nullable FavoriteModel fm) {\n                favoriteModel = fm;\n                if (favoriteModel.getWord() != null)\n                {\n                    word.setText(favoriteModel.getWord());\n                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {\n                        definition.setText(Html.fromHtml(favoriteModel.getDefinition(), Html.FROM_HTML_MODE_COMPACT));\n                    }\n                    else {\n                        definition.setText(Html.fromHtml(favoriteModel.getDefinition()));}\n                }\n\n            }\n        });\n\n\n        ib_DoFavorite.setOnClickListener(new View.OnClickListener() {\n            @Override\n            public void onClick(View view) {\nalertDialog.show();\n\n            }\n        });\n\n\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/ua/pp/sanderzet/sanderdict/view/ui/FragmentFavoriteWordUnfolded.java b/app/src/main/java/ua/pp/sanderzet/sanderdict/view/ui/FragmentFavoriteWordUnfolded.java
+--- a/app/src/main/java/ua/pp/sanderzet/sanderdict/view/ui/FragmentFavoriteWordUnfolded.java	(revision b041a7a417c1c8ae6fcdc25356d1fbd86ff90a21)
++++ b/app/src/main/java/ua/pp/sanderzet/sanderdict/view/ui/FragmentFavoriteWordUnfolded.java	(date 1767937782363)
+@@ -2,7 +2,7 @@
+ 
+ import android.app.AlertDialog;
+ import androidx.lifecycle.Observer;
+-import androidx.lifecycle.ViewModelProviders;
++import androidx.lifecycle.ViewModelProvider;
+ import android.content.DialogInterface;
+ import android.os.Build;
+ import android.os.Bundle;
+@@ -81,21 +81,17 @@
+ 
+ 
+ 
+-        favoriteListViewModel = ViewModelProviders.of(getActivity()).get(FavoriteListViewModel.class);
+-        mainActivityViewModel = ViewModelProviders.of(getActivity()).get(MainActivityViewModel.class);
++        favoriteListViewModel = new ViewModelProvider(requireActivity()).get(FavoriteListViewModel.class);
++        mainActivityViewModel = new ViewModelProvider(requireActivity()).get(MainActivityViewModel.class);
+ 
+-        mainActivityViewModel.getUnfoldedFavoriteWord().observe(getActivity(), new Observer<FavoriteModel>() {
++        mainActivityViewModel.getUnfoldedFavoriteWord().observe(requireActivity(), new Observer<FavoriteModel>() {
+             @Override
+             public void onChanged(@Nullable FavoriteModel fm) {
+                 favoriteModel = fm;
+                 if (favoriteModel.getWord() != null)
+                 {
+                     word.setText(favoriteModel.getWord());
+-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+-                        definition.setText(Html.fromHtml(favoriteModel.getDefinition(), Html.FROM_HTML_MODE_COMPACT));
+-                    }
+-                    else {
+-                        definition.setText(Html.fromHtml(favoriteModel.getDefinition()));}
++                    definition.setText(Html.fromHtml(favoriteModel.getDefinition(), Html.FROM_HTML_MODE_COMPACT));
+                 }
+ 
+             }
+Index: app/src/main/java/ua/pp/sanderzet/sanderdict/view/ui/FragmentWordUnfolded.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package ua.pp.sanderzet.sanderdict.view.ui;\n\nimport androidx.lifecycle.Observer;\nimport androidx.lifecycle.ViewModelProviders;\nimport android.os.Build;\nimport android.os.Bundle;\nimport androidx.annotation.Nullable;\nimport androidx.fragment.app.Fragment;\nimport android.text.Html;\nimport android.view.LayoutInflater;\nimport android.view.View;\nimport android.view.ViewGroup;\nimport android.widget.ImageButton;\nimport android.widget.TextView;\n\nimport ua.pp.sanderzet.sanderdict.R;\nimport ua.pp.sanderzet.sanderdict.data.model.DictionaryModel;\nimport ua.pp.sanderzet.sanderdict.viewmodel.FavoriteListViewModel;\nimport ua.pp.sanderzet.sanderdict.viewmodel.MainActivityViewModel;\n\n/**\n * Created by sander on 03.03.18.\n */\n\npublic class FragmentWordUnfolded extends Fragment {\n    private View rootView;\n    private MainActivityViewModel mainActivityViewModel;\n    private FavoriteListViewModel favoriteListViewModel;\n    private TextView word;\n    private TextView definition;\n    private ImageButton ib_DoFavorite;\n    private Boolean isFavorite;\n    private DictionaryModel  dictionaryModel;\n\n\n\n\n    @Override\n    public void onCreate(@Nullable Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        setRetainInstance(true);\n    }\n\n\n    @Nullable\n    @Override\n    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {\n        rootView = inflater.inflate(R.layout.word_unfolded, container, false);\n        return rootView;\n    }\n\n    @Override\n    public void onActivityCreated(@Nullable Bundle savedInstanceState) {\n        super.onActivityCreated(savedInstanceState);\n\n        word = rootView.findViewById(R.id.wordUnfolded);\n        definition = rootView.findViewById(R.id.definitionUnfolded);\nib_DoFavorite = rootView.findViewById(R.id.ib_DoFavorite);\n        mainActivityViewModel = ViewModelProviders.of(getActivity()).get(MainActivityViewModel.class);\n        favoriteListViewModel = ViewModelProviders.of(getActivity()).get(FavoriteListViewModel.class);\n\n        mainActivityViewModel.getUnfoldedWord().observe(getActivity(), new Observer<DictionaryModel>() {\n            @Override\n            public void onChanged(@Nullable DictionaryModel dm ) {\n                dictionaryModel = dm;\n                String word = dictionaryModel.getWord();\n                String definition = dictionaryModel.getDefinition();\n                if (word == null) word =\"\";\n                FragmentWordUnfolded.this.word.setText(word);\n                // З версіі N змінилася функція Html.fromHtml\n                // перевіряємо версію Андроїд для потрібної функції\n                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {\n                    FragmentWordUnfolded.this.definition.setText(Html.fromHtml(definition, Html.FROM_HTML_MODE_COMPACT));\n                }\n                else {\n                    FragmentWordUnfolded.this.definition.setText(Html.fromHtml(definition));}\n                /*Inform favoriteListViewModel that search is done and we have new word*\n                 */\n                favoriteListViewModel.searchIsDone(word, definition);\n            }\n\n        });\n\n        favoriteListViewModel.getWordIsFavorite().observe(getActivity(), new Observer<Boolean>() {\n            @Override\n            public void onChanged(@Nullable Boolean o) {\n                isFavorite = o;\n                if (isFavorite) ib_DoFavorite.setImageResource(R.drawable.ic_star_24dp);\n                else ib_DoFavorite.setImageResource(R.drawable.ic_star_border_24dp);\n            }\n        });\n\n        ib_DoFavorite.setOnClickListener(new View.OnClickListener() {\n            @Override\n            public void onClick(View view) {\n                if (dictionaryModel != null && dictionaryModel.getWord() != null)\n                {\n                    if (isFavorite) {\n                        favoriteListViewModel.removeWordFromFavorite(dictionaryModel.getWord());\n                    } else {\n                        favoriteListViewModel.addWordToFavorite(dictionaryModel.getWord(), dictionaryModel.getDefinition());\n                    }\n                }\n            }\n        });\n\n    }\n\n\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/ua/pp/sanderzet/sanderdict/view/ui/FragmentWordUnfolded.java b/app/src/main/java/ua/pp/sanderzet/sanderdict/view/ui/FragmentWordUnfolded.java
+--- a/app/src/main/java/ua/pp/sanderzet/sanderdict/view/ui/FragmentWordUnfolded.java	(revision b041a7a417c1c8ae6fcdc25356d1fbd86ff90a21)
++++ b/app/src/main/java/ua/pp/sanderzet/sanderdict/view/ui/FragmentWordUnfolded.java	(date 1767937782499)
+@@ -1,7 +1,7 @@
+ package ua.pp.sanderzet.sanderdict.view.ui;
+ 
+ import androidx.lifecycle.Observer;
+-import androidx.lifecycle.ViewModelProviders;
++import androidx.lifecycle.ViewModelProvider;
+ import android.os.Build;
+ import android.os.Bundle;
+ import androidx.annotation.Nullable;
+@@ -13,6 +13,8 @@
+ import android.widget.ImageButton;
+ import android.widget.TextView;
+ 
++import java.util.Objects;
++
+ import ua.pp.sanderzet.sanderdict.R;
+ import ua.pp.sanderzet.sanderdict.data.model.DictionaryModel;
+ import ua.pp.sanderzet.sanderdict.viewmodel.FavoriteListViewModel;
+@@ -56,24 +58,21 @@
+         word = rootView.findViewById(R.id.wordUnfolded);
+         definition = rootView.findViewById(R.id.definitionUnfolded);
+ ib_DoFavorite = rootView.findViewById(R.id.ib_DoFavorite);
+-        mainActivityViewModel = ViewModelProviders.of(getActivity()).get(MainActivityViewModel.class);
+-        favoriteListViewModel = ViewModelProviders.of(getActivity()).get(FavoriteListViewModel.class);
++        mainActivityViewModel = new ViewModelProvider(requireActivity()).get(MainActivityViewModel.class);
++        favoriteListViewModel = new ViewModelProvider(requireActivity()).get(FavoriteListViewModel.class);
+ 
+-        mainActivityViewModel.getUnfoldedWord().observe(getActivity(), new Observer<DictionaryModel>() {
++        mainActivityViewModel.getUnfoldedWord().observe(requireActivity(), new Observer<DictionaryModel>() {
+             @Override
+             public void onChanged(@Nullable DictionaryModel dm ) {
+                 dictionaryModel = dm;
++                assert dictionaryModel != null;
+                 String word = dictionaryModel.getWord();
+                 String definition = dictionaryModel.getDefinition();
+                 if (word == null) word ="";
+                 FragmentWordUnfolded.this.word.setText(word);
+                 // З версіі N змінилася функція Html.fromHtml
+                 // перевіряємо версію Андроїд для потрібної функції
+-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+-                    FragmentWordUnfolded.this.definition.setText(Html.fromHtml(definition, Html.FROM_HTML_MODE_COMPACT));
+-                }
+-                else {
+-                    FragmentWordUnfolded.this.definition.setText(Html.fromHtml(definition));}
++                FragmentWordUnfolded.this.definition.setText(Html.fromHtml(definition, Html.FROM_HTML_MODE_COMPACT));
+                 /*Inform favoriteListViewModel that search is done and we have new word*
+                  */
+                 favoriteListViewModel.searchIsDone(word, definition);
+@@ -81,12 +80,13 @@
+ 
+         });
+ 
+-        favoriteListViewModel.getWordIsFavorite().observe(getActivity(), new Observer<Boolean>() {
++        favoriteListViewModel.getWordIsFavorite().observe(requireActivity(), new Observer<Boolean>() {
+             @Override
+             public void onChanged(@Nullable Boolean o) {
+                 isFavorite = o;
+-                if (isFavorite) ib_DoFavorite.setImageResource(R.drawable.ic_star_24dp);
+-                else ib_DoFavorite.setImageResource(R.drawable.ic_star_border_24dp);
++                if (Boolean.TRUE.equals(isFavorite)) {
++                    ib_DoFavorite.setImageResource(R.drawable.ic_star_24dp);
++                } else ib_DoFavorite.setImageResource(R.drawable.ic_star_border_24dp);
+             }
+         });
+ 
+Index: .idea/caches/deviceStreaming.xml
+===================================================================
+diff --git a/.idea/caches/deviceStreaming.xml b/.idea/caches/deviceStreaming.xml
+deleted file mode 100644
+--- a/.idea/caches/deviceStreaming.xml	(revision b041a7a417c1c8ae6fcdc25356d1fbd86ff90a21)
++++ /dev/null	(revision b041a7a417c1c8ae6fcdc25356d1fbd86ff90a21)
+@@ -1,1186 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="DeviceStreaming">
+-    <option name="deviceSelectionList">
+-      <list>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="34" />
+-          <option name="brand" value="Sony" />
+-          <option name="codename" value="A402SO" />
+-          <option name="id" value="A402SO" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Sony" />
+-          <option name="name" value="Xperia 10" />
+-          <option name="screenDensity" value="450" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2520" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="27" />
+-          <option name="brand" value="DOCOMO" />
+-          <option name="codename" value="F01L" />
+-          <option name="id" value="F01L" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="FUJITSU" />
+-          <option name="name" value="F-01L" />
+-          <option name="screenDensity" value="360" />
+-          <option name="screenX" value="720" />
+-          <option name="screenY" value="1280" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="34" />
+-          <option name="brand" value="OnePlus" />
+-          <option name="codename" value="OP535DL1" />
+-          <option name="id" value="OP535DL1" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="OnePlus" />
+-          <option name="name" value="CPH2409" />
+-          <option name="screenDensity" value="401" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2412" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="34" />
+-          <option name="brand" value="OnePlus" />
+-          <option name="codename" value="OP5552L1" />
+-          <option name="id" value="OP5552L1" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="OnePlus" />
+-          <option name="name" value="CPH2415" />
+-          <option name="screenDensity" value="480" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2412" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="35" />
+-          <option name="brand" value="OnePlus" />
+-          <option name="codename" value="OP5552L1" />
+-          <option name="id" value="OP5552L1" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="OnePlus" />
+-          <option name="name" value="CPH2415" />
+-          <option name="screenDensity" value="480" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2412" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="34" />
+-          <option name="brand" value="OPPO" />
+-          <option name="codename" value="OP573DL1" />
+-          <option name="id" value="OP573DL1" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="OPPO" />
+-          <option name="name" value="CPH2557" />
+-          <option name="screenDensity" value="480" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2400" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="28" />
+-          <option name="brand" value="DOCOMO" />
+-          <option name="codename" value="SH-01L" />
+-          <option name="id" value="SH-01L" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="SHARP" />
+-          <option name="name" value="AQUOS sense2 SH-01L" />
+-          <option name="screenDensity" value="480" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2160" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="35" />
+-          <option name="brand" value="Lenovo" />
+-          <option name="codename" value="TB330FU" />
+-          <option name="formFactor" value="Tablet" />
+-          <option name="id" value="TB330FU" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Lenovo" />
+-          <option name="name" value="Tab M11" />
+-          <option name="screenDensity" value="240" />
+-          <option name="screenX" value="1200" />
+-          <option name="screenY" value="1920" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="33" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="a03su" />
+-          <option name="id" value="a03su" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="Galaxy A03s" />
+-          <option name="screenDensity" value="280" />
+-          <option name="screenX" value="720" />
+-          <option name="screenY" value="1600" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="35" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="a05s" />
+-          <option name="id" value="a05s" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="A05s" />
+-          <option name="screenDensity" value="450" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2400" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="35" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="a06" />
+-          <option name="id" value="a06" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="Galaxy A06" />
+-          <option name="screenDensity" value="300" />
+-          <option name="screenX" value="720" />
+-          <option name="screenY" value="1600" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="34" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="a14m" />
+-          <option name="id" value="a14m" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="SM-A145R" />
+-          <option name="screenDensity" value="450" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2408" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="34" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="a15" />
+-          <option name="id" value="a15" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="A15" />
+-          <option name="screenDensity" value="450" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2340" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="34" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="a15x" />
+-          <option name="id" value="a15x" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="A15 5G" />
+-          <option name="screenDensity" value="450" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2340" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="35" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="a16" />
+-          <option name="id" value="a16" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="SM-A165M" />
+-          <option name="screenDensity" value="450" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2340" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="34" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="a16x" />
+-          <option name="id" value="a16x" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="A16 5G" />
+-          <option name="screenDensity" value="450" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2340" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="36" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="a26x" />
+-          <option name="id" value="a26x" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="SM-A266B" />
+-          <option name="screenDensity" value="450" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2340" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="36" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="a34x" />
+-          <option name="id" value="a34x" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="SM-A346N" />
+-          <option name="screenDensity" value="450" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2340" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="34" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="a35x" />
+-          <option name="id" value="a35x" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="A35" />
+-          <option name="screenDensity" value="450" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2340" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="35" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="a35x" />
+-          <option name="id" value="a35x" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="A35" />
+-          <option name="screenDensity" value="450" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2340" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="35" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="a36xq" />
+-          <option name="id" value="a36xq" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="SM-A366E" />
+-          <option name="screenDensity" value="450" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2340" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="36" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="a36xq" />
+-          <option name="id" value="a36xq" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="SM-A366E" />
+-          <option name="screenDensity" value="450" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2340" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="35" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="a56x" />
+-          <option name="id" value="a56x" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="SM-A566E" />
+-          <option name="screenDensity" value="450" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2340" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="34" />
+-          <option name="brand" value="google" />
+-          <option name="codename" value="akita" />
+-          <option name="id" value="akita" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Google" />
+-          <option name="name" value="Pixel 8a" />
+-          <option name="screenDensity" value="420" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2400" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="35" />
+-          <option name="brand" value="google" />
+-          <option name="codename" value="akita" />
+-          <option name="id" value="akita" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Google" />
+-          <option name="name" value="Pixel 8a" />
+-          <option name="screenDensity" value="420" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2400" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="34" />
+-          <option name="brand" value="motorola" />
+-          <option name="codename" value="arcfox" />
+-          <option name="id" value="arcfox" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Motorola" />
+-          <option name="name" value="razr plus 2024" />
+-          <option name="screenDensity" value="360" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="1272" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="33" />
+-          <option name="brand" value="motorola" />
+-          <option name="codename" value="austin" />
+-          <option name="id" value="austin" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Motorola" />
+-          <option name="name" value="moto g 5G (2022)" />
+-          <option name="screenDensity" value="280" />
+-          <option name="screenX" value="720" />
+-          <option name="screenY" value="1600" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="33" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="b0q" />
+-          <option name="id" value="b0q" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="Galaxy S22 Ultra" />
+-          <option name="screenDensity" value="600" />
+-          <option name="screenX" value="1440" />
+-          <option name="screenY" value="3088" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="34" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="b6q" />
+-          <option name="id" value="b6q" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="Galaxy Z Flip 6" />
+-          <option name="screenDensity" value="340" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2640" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="36" />
+-          <option name="brand" value="google" />
+-          <option name="codename" value="blazer" />
+-          <option name="id" value="blazer" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Google" />
+-          <option name="name" value="Pixel 10 Pro" />
+-          <option name="screenDensity" value="420" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2410" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="32" />
+-          <option name="brand" value="google" />
+-          <option name="codename" value="bluejay" />
+-          <option name="id" value="bluejay" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Google" />
+-          <option name="name" value="Pixel 6a" />
+-          <option name="screenDensity" value="420" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2400" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="34" />
+-          <option name="brand" value="google" />
+-          <option name="codename" value="caiman" />
+-          <option name="id" value="caiman" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Google" />
+-          <option name="name" value="Pixel 9 Pro" />
+-          <option name="screenDensity" value="360" />
+-          <option name="screenX" value="960" />
+-          <option name="screenY" value="2142" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="35" />
+-          <option name="brand" value="google" />
+-          <option name="codename" value="caiman" />
+-          <option name="id" value="caiman" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Google" />
+-          <option name="name" value="Pixel 9 Pro" />
+-          <option name="screenDensity" value="360" />
+-          <option name="screenX" value="960" />
+-          <option name="screenY" value="2142" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="34" />
+-          <option name="brand" value="google" />
+-          <option name="codename" value="comet" />
+-          <option name="default" value="true" />
+-          <option name="id" value="comet" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Google" />
+-          <option name="name" value="Pixel 9 Pro Fold" />
+-          <option name="screenDensity" value="390" />
+-          <option name="screenX" value="2076" />
+-          <option name="screenY" value="2152" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="35" />
+-          <option name="brand" value="google" />
+-          <option name="codename" value="comet" />
+-          <option name="default" value="true" />
+-          <option name="id" value="comet" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Google" />
+-          <option name="name" value="Pixel 9 Pro Fold" />
+-          <option name="screenDensity" value="390" />
+-          <option name="screenX" value="2076" />
+-          <option name="screenY" value="2152" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="29" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="crownqlteue" />
+-          <option name="id" value="crownqlteue" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="Galaxy Note9" />
+-          <option name="screenDensity" value="420" />
+-          <option name="screenX" value="2220" />
+-          <option name="screenY" value="1080" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="35" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="dm1q" />
+-          <option name="id" value="dm1q" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="S23" />
+-          <option name="screenDensity" value="480" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2340" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="34" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="dm2q" />
+-          <option name="id" value="dm2q" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="S23 Plus" />
+-          <option name="screenDensity" value="450" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2340" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="34" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="dm3q" />
+-          <option name="id" value="dm3q" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="Galaxy S23 Ultra" />
+-          <option name="screenDensity" value="600" />
+-          <option name="screenX" value="1440" />
+-          <option name="screenY" value="3088" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="34" />
+-          <option name="brand" value="motorola" />
+-          <option name="codename" value="dubai" />
+-          <option name="id" value="dubai" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Motorola" />
+-          <option name="name" value="edge 30" />
+-          <option name="screenDensity" value="405" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2400" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="34" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="e1q" />
+-          <option name="default" value="true" />
+-          <option name="id" value="e1q" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="Galaxy S24" />
+-          <option name="screenDensity" value="480" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2340" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="36" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="e1q" />
+-          <option name="default" value="true" />
+-          <option name="id" value="e1q" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="Galaxy S24" />
+-          <option name="screenDensity" value="480" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2340" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="34" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="e3q" />
+-          <option name="id" value="e3q" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="Galaxy S24 Ultra" />
+-          <option name="screenDensity" value="450" />
+-          <option name="screenX" value="1440" />
+-          <option name="screenY" value="3120" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="36" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="e3q" />
+-          <option name="id" value="e3q" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="Galaxy S24 Ultra" />
+-          <option name="screenDensity" value="450" />
+-          <option name="screenX" value="1440" />
+-          <option name="screenY" value="3120" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="33" />
+-          <option name="brand" value="google" />
+-          <option name="codename" value="eos" />
+-          <option name="id" value="eos" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Google" />
+-          <option name="name" value="Eos" />
+-          <option name="screenDensity" value="320" />
+-          <option name="screenX" value="384" />
+-          <option name="screenY" value="384" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="33" />
+-          <option name="brand" value="google" />
+-          <option name="codename" value="felix" />
+-          <option name="id" value="felix" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Google" />
+-          <option name="name" value="Pixel Fold" />
+-          <option name="screenDensity" value="420" />
+-          <option name="screenX" value="2208" />
+-          <option name="screenY" value="1840" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="34" />
+-          <option name="brand" value="google" />
+-          <option name="codename" value="felix" />
+-          <option name="id" value="felix" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Google" />
+-          <option name="name" value="Pixel Fold" />
+-          <option name="screenDensity" value="420" />
+-          <option name="screenX" value="2208" />
+-          <option name="screenY" value="1840" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="33" />
+-          <option name="brand" value="google" />
+-          <option name="codename" value="felix_camera" />
+-          <option name="id" value="felix_camera" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Google" />
+-          <option name="name" value="Pixel Fold (Camera-enabled)" />
+-          <option name="screenDensity" value="420" />
+-          <option name="screenX" value="2208" />
+-          <option name="screenY" value="1840" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="34" />
+-          <option name="brand" value="motorola" />
+-          <option name="codename" value="fogona" />
+-          <option name="id" value="fogona" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Motorola" />
+-          <option name="name" value="moto g play - 2024" />
+-          <option name="screenDensity" value="280" />
+-          <option name="screenX" value="720" />
+-          <option name="screenY" value="1600" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="34" />
+-          <option name="brand" value="motorola" />
+-          <option name="codename" value="fogos" />
+-          <option name="id" value="fogos" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Motorola" />
+-          <option name="name" value="moto g34 5G" />
+-          <option name="screenDensity" value="280" />
+-          <option name="screenX" value="720" />
+-          <option name="screenY" value="1600" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="36" />
+-          <option name="brand" value="google" />
+-          <option name="codename" value="frankel" />
+-          <option name="id" value="frankel" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Google" />
+-          <option name="name" value="Pixel 10" />
+-          <option name="screenDensity" value="420" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2424" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="34" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="g0q" />
+-          <option name="id" value="g0q" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="SM-S906U1" />
+-          <option name="screenDensity" value="450" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2340" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="36" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="g0q" />
+-          <option name="id" value="g0q" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="SM-S906U1" />
+-          <option name="screenDensity" value="450" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2340" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="34" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="gta9pwifi" />
+-          <option name="id" value="gta9pwifi" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="SM-X210" />
+-          <option name="screenDensity" value="240" />
+-          <option name="screenX" value="1200" />
+-          <option name="screenY" value="1920" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="33" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="gts7lwifi" />
+-          <option name="id" value="gts7lwifi" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="SM-T870" />
+-          <option name="screenDensity" value="340" />
+-          <option name="screenX" value="1600" />
+-          <option name="screenY" value="2560" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="34" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="gts7xllite" />
+-          <option name="id" value="gts7xllite" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="SM-T738U" />
+-          <option name="screenDensity" value="340" />
+-          <option name="screenX" value="1600" />
+-          <option name="screenY" value="2560" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="33" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="gts8uwifi" />
+-          <option name="formFactor" value="Tablet" />
+-          <option name="id" value="gts8uwifi" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="Galaxy Tab S8 Ultra" />
+-          <option name="screenDensity" value="320" />
+-          <option name="screenX" value="1848" />
+-          <option name="screenY" value="2960" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="34" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="gts8wifi" />
+-          <option name="formFactor" value="Tablet" />
+-          <option name="id" value="gts8wifi" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="Galaxy Tab S8" />
+-          <option name="screenDensity" value="274" />
+-          <option name="screenX" value="1600" />
+-          <option name="screenY" value="2560" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="34" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="gts9fe" />
+-          <option name="id" value="gts9fe" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="Galaxy Tab S9 FE 5G" />
+-          <option name="screenDensity" value="280" />
+-          <option name="screenX" value="1440" />
+-          <option name="screenY" value="2304" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="34" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="gts9wifi" />
+-          <option name="id" value="gts9wifi" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="SM-X710" />
+-          <option name="screenDensity" value="340" />
+-          <option name="screenX" value="1600" />
+-          <option name="screenY" value="2560" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="34" />
+-          <option name="brand" value="google" />
+-          <option name="codename" value="husky" />
+-          <option name="id" value="husky" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Google" />
+-          <option name="name" value="Pixel 8 Pro" />
+-          <option name="screenDensity" value="390" />
+-          <option name="screenX" value="1008" />
+-          <option name="screenY" value="2244" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="30" />
+-          <option name="brand" value="motorola" />
+-          <option name="codename" value="java" />
+-          <option name="id" value="java" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Motorola" />
+-          <option name="name" value="G20" />
+-          <option name="screenDensity" value="280" />
+-          <option name="screenX" value="720" />
+-          <option name="screenY" value="1600" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="35" />
+-          <option name="brand" value="motorola" />
+-          <option name="codename" value="kansas" />
+-          <option name="id" value="kansas" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Motorola" />
+-          <option name="name" value="moto g - 2025" />
+-          <option name="screenDensity" value="280" />
+-          <option name="screenX" value="720" />
+-          <option name="screenY" value="1604" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="34" />
+-          <option name="brand" value="google" />
+-          <option name="codename" value="komodo" />
+-          <option name="id" value="komodo" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Google" />
+-          <option name="name" value="Pixel 9 Pro XL" />
+-          <option name="screenDensity" value="360" />
+-          <option name="screenX" value="1008" />
+-          <option name="screenY" value="2244" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="35" />
+-          <option name="brand" value="google" />
+-          <option name="codename" value="komodo" />
+-          <option name="id" value="komodo" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Google" />
+-          <option name="name" value="Pixel 9 Pro XL" />
+-          <option name="screenDensity" value="360" />
+-          <option name="screenX" value="1008" />
+-          <option name="screenY" value="2244" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="35" />
+-          <option name="brand" value="motorola" />
+-          <option name="codename" value="lamul" />
+-          <option name="id" value="lamul" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Motorola" />
+-          <option name="name" value="moto g05" />
+-          <option name="screenDensity" value="280" />
+-          <option name="screenX" value="720" />
+-          <option name="screenY" value="1604" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="34" />
+-          <option name="brand" value="motorola" />
+-          <option name="codename" value="lion" />
+-          <option name="id" value="lion" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Motorola" />
+-          <option name="name" value="moto g04" />
+-          <option name="screenDensity" value="280" />
+-          <option name="screenX" value="720" />
+-          <option name="screenY" value="1612" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="33" />
+-          <option name="brand" value="google" />
+-          <option name="codename" value="lynx" />
+-          <option name="id" value="lynx" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Google" />
+-          <option name="name" value="Pixel 7a" />
+-          <option name="screenDensity" value="420" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2400" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="34" />
+-          <option name="brand" value="motorola" />
+-          <option name="codename" value="lyriq" />
+-          <option name="id" value="lyriq" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Motorola" />
+-          <option name="name" value="edge 40" />
+-          <option name="screenDensity" value="400" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2400" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="34" />
+-          <option name="brand" value="motorola" />
+-          <option name="codename" value="manaus" />
+-          <option name="id" value="manaus" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Motorola" />
+-          <option name="name" value="edge 40 neo" />
+-          <option name="screenDensity" value="400" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2400" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="33" />
+-          <option name="brand" value="motorola" />
+-          <option name="codename" value="maui" />
+-          <option name="id" value="maui" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Motorola" />
+-          <option name="name" value="moto g play - 2023" />
+-          <option name="screenDensity" value="280" />
+-          <option name="screenX" value="720" />
+-          <option name="screenY" value="1600" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="36" />
+-          <option name="brand" value="google" />
+-          <option name="codename" value="mustang" />
+-          <option name="id" value="mustang" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Google" />
+-          <option name="name" value="Pixel 10 Pro XL" />
+-          <option name="screenDensity" value="390" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2404" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="34" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="o1q" />
+-          <option name="id" value="o1q" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="Galaxy S21" />
+-          <option name="screenDensity" value="421" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2400" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="35" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="o1q" />
+-          <option name="id" value="o1q" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="Galaxy S21" />
+-          <option name="screenDensity" value="421" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2400" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="31" />
+-          <option name="brand" value="google" />
+-          <option name="codename" value="oriole" />
+-          <option name="id" value="oriole" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Google" />
+-          <option name="name" value="Pixel 6" />
+-          <option name="screenDensity" value="420" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2400" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="35" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="p3q" />
+-          <option name="id" value="p3q" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="Galaxy S21 Ultra" />
+-          <option name="screenDensity" value="600" />
+-          <option name="screenX" value="1440" />
+-          <option name="screenY" value="3200" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="36" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="pa2q" />
+-          <option name="id" value="pa2q" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="S25+" />
+-          <option name="screenDensity" value="450" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2340" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="35" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="pa3q" />
+-          <option name="id" value="pa3q" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="Galaxy S25 Ultra" />
+-          <option name="screenDensity" value="600" />
+-          <option name="screenX" value="1440" />
+-          <option name="screenY" value="3120" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="36" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="pa3q" />
+-          <option name="id" value="pa3q" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="Galaxy S25 Ultra" />
+-          <option name="screenDensity" value="600" />
+-          <option name="screenX" value="1440" />
+-          <option name="screenY" value="3120" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="33" />
+-          <option name="brand" value="google" />
+-          <option name="codename" value="panther" />
+-          <option name="id" value="panther" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Google" />
+-          <option name="name" value="Pixel 7" />
+-          <option name="screenDensity" value="420" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2400" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="35" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="psq" />
+-          <option name="id" value="psq" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="Galaxy S25 Edge" />
+-          <option name="screenDensity" value="450" />
+-          <option name="screenX" value="1440" />
+-          <option name="screenY" value="3120" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="34" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="q5q" />
+-          <option name="id" value="q5q" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="Galaxy Z Fold5" />
+-          <option name="screenDensity" value="420" />
+-          <option name="screenX" value="1812" />
+-          <option name="screenY" value="2176" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="34" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="q6q" />
+-          <option name="id" value="q6q" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="Galaxy Z Fold6" />
+-          <option name="screenDensity" value="420" />
+-          <option name="screenX" value="1856" />
+-          <option name="screenY" value="2160" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="30" />
+-          <option name="brand" value="google" />
+-          <option name="codename" value="r11" />
+-          <option name="formFactor" value="Wear OS" />
+-          <option name="id" value="r11" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Google" />
+-          <option name="name" value="Pixel Watch" />
+-          <option name="screenDensity" value="320" />
+-          <option name="screenX" value="384" />
+-          <option name="screenY" value="384" />
+-          <option name="type" value="WEAR_OS" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="34" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="r11q" />
+-          <option name="id" value="r11q" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="SM-S711U" />
+-          <option name="screenDensity" value="450" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2340" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="36" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="r9q" />
+-          <option name="id" value="r9q" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="Galaxy S21 FE 5G" />
+-          <option name="screenDensity" value="480" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2340" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="36" />
+-          <option name="brand" value="google" />
+-          <option name="codename" value="rango" />
+-          <option name="id" value="rango" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Google" />
+-          <option name="name" value="Pixel 10 Pro Fold" />
+-          <option name="screenDensity" value="390" />
+-          <option name="screenX" value="2076" />
+-          <option name="screenY" value="2152" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="30" />
+-          <option name="brand" value="google" />
+-          <option name="codename" value="redfin" />
+-          <option name="id" value="redfin" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Google" />
+-          <option name="name" value="Pixel 5" />
+-          <option name="screenDensity" value="440" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2340" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="34" />
+-          <option name="brand" value="google" />
+-          <option name="codename" value="shiba" />
+-          <option name="id" value="shiba" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Google" />
+-          <option name="name" value="Pixel 8" />
+-          <option name="screenDensity" value="420" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2400" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="34" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="t2q" />
+-          <option name="id" value="t2q" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="Galaxy S21 Plus" />
+-          <option name="screenDensity" value="394" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2400" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="33" />
+-          <option name="brand" value="google" />
+-          <option name="codename" value="tangorpro" />
+-          <option name="formFactor" value="Tablet" />
+-          <option name="id" value="tangorpro" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Google" />
+-          <option name="name" value="Pixel Tablet" />
+-          <option name="screenDensity" value="320" />
+-          <option name="screenX" value="1600" />
+-          <option name="screenY" value="2560" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="35" />
+-          <option name="brand" value="google" />
+-          <option name="codename" value="tegu" />
+-          <option name="id" value="tegu" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Google" />
+-          <option name="name" value="Pixel 9a" />
+-          <option name="screenDensity" value="420" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2424" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="34" />
+-          <option name="brand" value="google" />
+-          <option name="codename" value="tokay" />
+-          <option name="default" value="true" />
+-          <option name="id" value="tokay" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Google" />
+-          <option name="name" value="Pixel 9" />
+-          <option name="screenDensity" value="420" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2424" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="35" />
+-          <option name="brand" value="google" />
+-          <option name="codename" value="tokay" />
+-          <option name="default" value="true" />
+-          <option name="id" value="tokay" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Google" />
+-          <option name="name" value="Pixel 9" />
+-          <option name="screenDensity" value="420" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2424" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="36" />
+-          <option name="brand" value="google" />
+-          <option name="codename" value="tokay" />
+-          <option name="default" value="true" />
+-          <option name="id" value="tokay" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Google" />
+-          <option name="name" value="Pixel 9" />
+-          <option name="screenDensity" value="420" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2424" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="34" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="xcover7" />
+-          <option name="id" value="xcover7" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="SM-G556B" />
+-          <option name="screenDensity" value="450" />
+-          <option name="screenX" value="1080" />
+-          <option name="screenY" value="2408" />
+-        </PersistentDeviceSelectionData>
+-        <PersistentDeviceSelectionData>
+-          <option name="api" value="33" />
+-          <option name="brand" value="samsung" />
+-          <option name="codename" value="y2q" />
+-          <option name="id" value="y2q" />
+-          <option name="labId" value="google" />
+-          <option name="manufacturer" value="Samsung" />
+-          <option name="name" value="S20 Plus 5G" />
+-          <option name="screenDensity" value="600" />
+-          <option name="screenX" value="1440" />
+-          <option name="screenY" value="3200" />
+-        </PersistentDeviceSelectionData>
+-      </list>
+-    </option>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/dbnavigator.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"DBNavigator.Project.DataEditorManager\">\n    <record-view-column-sorting-type value=\"BY_INDEX\" />\n    <value-preview-text-wrapping value=\"false\" />\n    <value-preview-pinned value=\"false\" />\n  </component>\n  <component name=\"DBNavigator.Project.DataExportManager\">\n    <export-instructions>\n      <create-header value=\"true\" />\n      <quote-values-containing-separator value=\"true\" />\n      <quote-all-values value=\"false\" />\n      <value-separator value=\"\" />\n      <file-name value=\"\" />\n      <file-location value=\"\" />\n      <scope value=\"GLOBAL\" />\n      <destination value=\"FILE\" />\n      <format value=\"EXCEL\" />\n      <charset value=\"UTF-8\" />\n    </export-instructions>\n  </component>\n  <component name=\"DBNavigator.Project.DatabaseBrowserManager\">\n    <autoscroll-to-editor value=\"false\" />\n    <autoscroll-from-editor value=\"true\" />\n    <show-object-properties value=\"true\" />\n    <loaded-nodes />\n  </component>\n  <component name=\"DBNavigator.Project.DatabaseFileManager\">\n    <open-files />\n  </component>\n  <component name=\"DBNavigator.Project.EditorStateManager\">\n    <last-used-providers />\n  </component>\n  <component name=\"DBNavigator.Project.MethodExecutionManager\">\n    <method-browser />\n    <execution-history>\n      <group-entries value=\"true\" />\n      <execution-inputs />\n    </execution-history>\n    <argument-values-cache />\n  </component>\n  <component name=\"DBNavigator.Project.ObjectDependencyManager\">\n    <last-used-dependency-type value=\"INCOMING\" />\n  </component>\n  <component name=\"DBNavigator.Project.ObjectQuickFilterManager\">\n    <last-used-operator value=\"EQUAL\" />\n    <filters />\n  </component>\n  <component name=\"DBNavigator.Project.ScriptExecutionManager\" clear-outputs=\"true\">\n    <recently-used-interfaces />\n  </component>\n  <component name=\"DBNavigator.Project.Settings\">\n    <connections />\n    <browser-settings>\n      <general>\n        <display-mode value=\"TABBED\" />\n        <navigation-history-size value=\"100\" />\n        <show-object-details value=\"false\" />\n      </general>\n      <filters>\n        <object-type-filter>\n          <object-type name=\"SCHEMA\" enabled=\"true\" />\n          <object-type name=\"USER\" enabled=\"true\" />\n          <object-type name=\"ROLE\" enabled=\"true\" />\n          <object-type name=\"PRIVILEGE\" enabled=\"true\" />\n          <object-type name=\"CHARSET\" enabled=\"true\" />\n          <object-type name=\"TABLE\" enabled=\"true\" />\n          <object-type name=\"VIEW\" enabled=\"true\" />\n          <object-type name=\"MATERIALIZED_VIEW\" enabled=\"true\" />\n          <object-type name=\"NESTED_TABLE\" enabled=\"true\" />\n          <object-type name=\"COLUMN\" enabled=\"true\" />\n          <object-type name=\"INDEX\" enabled=\"true\" />\n          <object-type name=\"CONSTRAINT\" enabled=\"true\" />\n          <object-type name=\"DATASET_TRIGGER\" enabled=\"true\" />\n          <object-type name=\"DATABASE_TRIGGER\" enabled=\"true\" />\n          <object-type name=\"SYNONYM\" enabled=\"true\" />\n          <object-type name=\"SEQUENCE\" enabled=\"true\" />\n          <object-type name=\"PROCEDURE\" enabled=\"true\" />\n          <object-type name=\"FUNCTION\" enabled=\"true\" />\n          <object-type name=\"PACKAGE\" enabled=\"true\" />\n          <object-type name=\"TYPE\" enabled=\"true\" />\n          <object-type name=\"TYPE_ATTRIBUTE\" enabled=\"true\" />\n          <object-type name=\"ARGUMENT\" enabled=\"true\" />\n          <object-type name=\"DIMENSION\" enabled=\"true\" />\n          <object-type name=\"CLUSTER\" enabled=\"true\" />\n          <object-type name=\"DBLINK\" enabled=\"true\" />\n        </object-type-filter>\n      </filters>\n      <sorting>\n        <object-type name=\"COLUMN\" sorting-type=\"NAME\" />\n        <object-type name=\"FUNCTION\" sorting-type=\"NAME\" />\n        <object-type name=\"PROCEDURE\" sorting-type=\"NAME\" />\n        <object-type name=\"ARGUMENT\" sorting-type=\"POSITION\" />\n      </sorting>\n      <default-editors>\n        <object-type name=\"VIEW\" editor-type=\"SELECTION\" />\n        <object-type name=\"PACKAGE\" editor-type=\"SELECTION\" />\n        <object-type name=\"TYPE\" editor-type=\"SELECTION\" />\n      </default-editors>\n    </browser-settings>\n    <navigation-settings>\n      <lookup-filters>\n        <lookup-objects>\n          <object-type name=\"SCHEMA\" enabled=\"true\" />\n          <object-type name=\"USER\" enabled=\"false\" />\n          <object-type name=\"ROLE\" enabled=\"false\" />\n          <object-type name=\"PRIVILEGE\" enabled=\"false\" />\n          <object-type name=\"CHARSET\" enabled=\"false\" />\n          <object-type name=\"TABLE\" enabled=\"true\" />\n          <object-type name=\"VIEW\" enabled=\"true\" />\n          <object-type name=\"MATERIALIZED VIEW\" enabled=\"true\" />\n          <object-type name=\"NESTED TABLE\" enabled=\"false\" />\n          <object-type name=\"COLUMN\" enabled=\"false\" />\n          <object-type name=\"INDEX\" enabled=\"true\" />\n          <object-type name=\"CONSTRAINT\" enabled=\"true\" />\n          <object-type name=\"DATASET TRIGGER\" enabled=\"true\" />\n          <object-type name=\"DATABASE TRIGGER\" enabled=\"true\" />\n          <object-type name=\"SYNONYM\" enabled=\"false\" />\n          <object-type name=\"SEQUENCE\" enabled=\"true\" />\n          <object-type name=\"PROCEDURE\" enabled=\"true\" />\n          <object-type name=\"FUNCTION\" enabled=\"true\" />\n          <object-type name=\"PACKAGE\" enabled=\"true\" />\n          <object-type name=\"TYPE\" enabled=\"true\" />\n          <object-type name=\"TYPE ATTRIBUTE\" enabled=\"false\" />\n          <object-type name=\"ARGUMENT\" enabled=\"false\" />\n          <object-type name=\"DIMENSION\" enabled=\"false\" />\n          <object-type name=\"CLUSTER\" enabled=\"false\" />\n          <object-type name=\"DBLINK\" enabled=\"true\" />\n        </lookup-objects>\n        <force-database-load value=\"false\" />\n        <prompt-connection-selection value=\"true\" />\n        <prompt-schema-selection value=\"true\" />\n      </lookup-filters>\n    </navigation-settings>\n    <dataset-grid-settings>\n      <general>\n        <enable-zooming value=\"true\" />\n        <enable-column-tooltip value=\"true\" />\n      </general>\n      <sorting>\n        <nulls-first value=\"true\" />\n        <max-sorting-columns value=\"4\" />\n      </sorting>\n      <tracking-columns>\n        <columnNames value=\"\" />\n        <visible value=\"true\" />\n        <editable value=\"false\" />\n      </tracking-columns>\n    </dataset-grid-settings>\n    <dataset-editor-settings>\n      <text-editor-popup>\n        <active value=\"false\" />\n        <active-if-empty value=\"false\" />\n        <data-length-threshold value=\"100\" />\n        <popup-delay value=\"1000\" />\n      </text-editor-popup>\n      <values-list-popup>\n        <show-popup-button value=\"true\" />\n        <element-count-threshold value=\"1000\" />\n        <data-length-threshold value=\"250\" />\n      </values-list-popup>\n      <general>\n        <fetch-block-size value=\"100\" />\n        <fetch-timeout value=\"30\" />\n        <trim-whitespaces value=\"true\" />\n        <convert-empty-strings-to-null value=\"true\" />\n        <select-content-on-cell-edit value=\"true\" />\n        <large-value-preview-active value=\"true\" />\n      </general>\n      <filters>\n        <prompt-filter-dialog value=\"true\" />\n        <default-filter-type value=\"BASIC\" />\n      </filters>\n      <qualified-text-editor text-length-threshold=\"300\">\n        <content-types>\n          <content-type name=\"Text\" enabled=\"true\" />\n          <content-type name=\"Properties\" enabled=\"true\" />\n          <content-type name=\"XML\" enabled=\"true\" />\n          <content-type name=\"DTD\" enabled=\"true\" />\n          <content-type name=\"HTML\" enabled=\"true\" />\n          <content-type name=\"XHTML\" enabled=\"true\" />\n          <content-type name=\"Java\" enabled=\"true\" />\n          <content-type name=\"SQL\" enabled=\"true\" />\n          <content-type name=\"PL/SQL\" enabled=\"true\" />\n          <content-type name=\"Groovy\" enabled=\"true\" />\n          <content-type name=\"AIDL\" enabled=\"true\" />\n          <content-type name=\"YAML\" enabled=\"true\" />\n          <content-type name=\"Manifest\" enabled=\"true\" />\n        </content-types>\n      </qualified-text-editor>\n      <record-navigation>\n        <navigation-target value=\"VIEWER\" />\n      </record-navigation>\n    </dataset-editor-settings>\n    <code-editor-settings>\n      <general>\n        <show-object-navigation-gutter value=\"false\" />\n        <show-spec-declaration-navigation-gutter value=\"true\" />\n        <enable-spellchecking value=\"true\" />\n        <enable-reference-spellchecking value=\"false\" />\n      </general>\n      <confirmations>\n        <save-changes value=\"false\" />\n        <revert-changes value=\"true\" />\n      </confirmations>\n    </code-editor-settings>\n    <code-completion-settings>\n      <filters>\n        <basic-filter>\n          <filter-element type=\"RESERVED_WORD\" id=\"keyword\" selected=\"true\" />\n          <filter-element type=\"RESERVED_WORD\" id=\"function\" selected=\"true\" />\n          <filter-element type=\"RESERVED_WORD\" id=\"parameter\" selected=\"true\" />\n          <filter-element type=\"RESERVED_WORD\" id=\"datatype\" selected=\"true\" />\n          <filter-element type=\"RESERVED_WORD\" id=\"exception\" selected=\"true\" />\n          <filter-element type=\"OBJECT\" id=\"schema\" selected=\"true\" />\n          <filter-element type=\"OBJECT\" id=\"role\" selected=\"true\" />\n          <filter-element type=\"OBJECT\" id=\"user\" selected=\"true\" />\n          <filter-element type=\"OBJECT\" id=\"privilege\" selected=\"true\" />\n          <user-schema>\n            <filter-element type=\"OBJECT\" id=\"table\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"view\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"materialized view\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"index\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"constraint\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"trigger\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"synonym\" selected=\"false\" />\n            <filter-element type=\"OBJECT\" id=\"sequence\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"procedure\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"function\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"package\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"type\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"dimension\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"cluster\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"dblink\" selected=\"true\" />\n          </user-schema>\n          <public-schema>\n            <filter-element type=\"OBJECT\" id=\"table\" selected=\"false\" />\n            <filter-element type=\"OBJECT\" id=\"view\" selected=\"false\" />\n            <filter-element type=\"OBJECT\" id=\"materialized view\" selected=\"false\" />\n            <filter-element type=\"OBJECT\" id=\"index\" selected=\"false\" />\n            <filter-element type=\"OBJECT\" id=\"constraint\" selected=\"false\" />\n            <filter-element type=\"OBJECT\" id=\"trigger\" selected=\"false\" />\n            <filter-element type=\"OBJECT\" id=\"synonym\" selected=\"false\" />\n            <filter-element type=\"OBJECT\" id=\"sequence\" selected=\"false\" />\n            <filter-element type=\"OBJECT\" id=\"procedure\" selected=\"false\" />\n            <filter-element type=\"OBJECT\" id=\"function\" selected=\"false\" />\n            <filter-element type=\"OBJECT\" id=\"package\" selected=\"false\" />\n            <filter-element type=\"OBJECT\" id=\"type\" selected=\"false\" />\n            <filter-element type=\"OBJECT\" id=\"dimension\" selected=\"false\" />\n            <filter-element type=\"OBJECT\" id=\"cluster\" selected=\"false\" />\n            <filter-element type=\"OBJECT\" id=\"dblink\" selected=\"false\" />\n          </public-schema>\n          <any-schema>\n            <filter-element type=\"OBJECT\" id=\"table\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"view\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"materialized view\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"index\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"constraint\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"trigger\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"synonym\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"sequence\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"procedure\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"function\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"package\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"type\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"dimension\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"cluster\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"dblink\" selected=\"true\" />\n          </any-schema>\n        </basic-filter>\n        <extended-filter>\n          <filter-element type=\"RESERVED_WORD\" id=\"keyword\" selected=\"true\" />\n          <filter-element type=\"RESERVED_WORD\" id=\"function\" selected=\"true\" />\n          <filter-element type=\"RESERVED_WORD\" id=\"parameter\" selected=\"true\" />\n          <filter-element type=\"RESERVED_WORD\" id=\"datatype\" selected=\"true\" />\n          <filter-element type=\"RESERVED_WORD\" id=\"exception\" selected=\"true\" />\n          <filter-element type=\"OBJECT\" id=\"schema\" selected=\"true\" />\n          <filter-element type=\"OBJECT\" id=\"user\" selected=\"true\" />\n          <filter-element type=\"OBJECT\" id=\"role\" selected=\"true\" />\n          <filter-element type=\"OBJECT\" id=\"privilege\" selected=\"true\" />\n          <user-schema>\n            <filter-element type=\"OBJECT\" id=\"table\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"view\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"materialized view\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"index\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"constraint\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"trigger\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"synonym\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"sequence\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"procedure\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"function\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"package\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"type\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"dimension\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"cluster\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"dblink\" selected=\"true\" />\n          </user-schema>\n          <public-schema>\n            <filter-element type=\"OBJECT\" id=\"table\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"view\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"materialized view\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"index\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"constraint\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"trigger\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"synonym\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"sequence\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"procedure\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"function\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"package\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"type\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"dimension\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"cluster\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"dblink\" selected=\"true\" />\n          </public-schema>\n          <any-schema>\n            <filter-element type=\"OBJECT\" id=\"table\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"view\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"materialized view\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"index\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"constraint\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"trigger\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"synonym\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"sequence\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"procedure\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"function\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"package\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"type\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"dimension\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"cluster\" selected=\"true\" />\n            <filter-element type=\"OBJECT\" id=\"dblink\" selected=\"true\" />\n          </any-schema>\n        </extended-filter>\n      </filters>\n      <sorting enabled=\"true\">\n        <sorting-element type=\"RESERVED_WORD\" id=\"keyword\" />\n        <sorting-element type=\"RESERVED_WORD\" id=\"datatype\" />\n        <sorting-element type=\"OBJECT\" id=\"column\" />\n        <sorting-element type=\"OBJECT\" id=\"table\" />\n        <sorting-element type=\"OBJECT\" id=\"view\" />\n        <sorting-element type=\"OBJECT\" id=\"materialized view\" />\n        <sorting-element type=\"OBJECT\" id=\"index\" />\n        <sorting-element type=\"OBJECT\" id=\"constraint\" />\n        <sorting-element type=\"OBJECT\" id=\"trigger\" />\n        <sorting-element type=\"OBJECT\" id=\"synonym\" />\n        <sorting-element type=\"OBJECT\" id=\"sequence\" />\n        <sorting-element type=\"OBJECT\" id=\"procedure\" />\n        <sorting-element type=\"OBJECT\" id=\"function\" />\n        <sorting-element type=\"OBJECT\" id=\"package\" />\n        <sorting-element type=\"OBJECT\" id=\"type\" />\n        <sorting-element type=\"OBJECT\" id=\"dimension\" />\n        <sorting-element type=\"OBJECT\" id=\"cluster\" />\n        <sorting-element type=\"OBJECT\" id=\"dblink\" />\n        <sorting-element type=\"OBJECT\" id=\"schema\" />\n        <sorting-element type=\"OBJECT\" id=\"role\" />\n        <sorting-element type=\"OBJECT\" id=\"user\" />\n        <sorting-element type=\"RESERVED_WORD\" id=\"function\" />\n        <sorting-element type=\"RESERVED_WORD\" id=\"parameter\" />\n      </sorting>\n      <format>\n        <enforce-code-style-case value=\"true\" />\n      </format>\n    </code-completion-settings>\n    <execution-engine-settings>\n      <statement-execution>\n        <fetch-block-size value=\"100\" />\n        <execution-timeout value=\"20\" />\n        <debug-execution-timeout value=\"600\" />\n        <focus-result value=\"false\" />\n        <prompt-execution value=\"false\" />\n      </statement-execution>\n      <script-execution>\n        <command-line-interfaces />\n        <execution-timeout value=\"300\" />\n      </script-execution>\n      <method-execution>\n        <execution-timeout value=\"30\" />\n        <debug-execution-timeout value=\"600\" />\n        <parameter-history-size value=\"10\" />\n      </method-execution>\n    </execution-engine-settings>\n    <operation-settings>\n      <transactions>\n        <uncommitted-changes>\n          <on-project-close value=\"ASK\" />\n          <on-disconnect value=\"ASK\" />\n          <on-autocommit-toggle value=\"ASK\" />\n        </uncommitted-changes>\n        <multiple-uncommitted-changes>\n          <on-commit value=\"ASK\" />\n          <on-rollback value=\"ASK\" />\n        </multiple-uncommitted-changes>\n      </transactions>\n      <session-browser>\n        <disconnect-session value=\"ASK\" />\n        <kill-session value=\"ASK\" />\n        <reload-on-filter-change value=\"false\" />\n      </session-browser>\n      <compiler>\n        <compile-type value=\"KEEP\" />\n        <compile-dependencies value=\"ASK\" />\n        <always-show-controls value=\"false\" />\n      </compiler>\n      <debugger>\n        <debugger-type value=\"ASK\" />\n        <use-generic-runners value=\"true\" />\n      </debugger>\n    </operation-settings>\n    <ddl-file-settings>\n      <extensions>\n        <mapping file-type-id=\"VIEW\" extensions=\"vw\" />\n        <mapping file-type-id=\"TRIGGER\" extensions=\"trg\" />\n        <mapping file-type-id=\"PROCEDURE\" extensions=\"prc\" />\n        <mapping file-type-id=\"FUNCTION\" extensions=\"fnc\" />\n        <mapping file-type-id=\"PACKAGE\" extensions=\"pkg\" />\n        <mapping file-type-id=\"PACKAGE_SPEC\" extensions=\"pks\" />\n        <mapping file-type-id=\"PACKAGE_BODY\" extensions=\"pkb\" />\n        <mapping file-type-id=\"TYPE\" extensions=\"tpe\" />\n        <mapping file-type-id=\"TYPE_SPEC\" extensions=\"tps\" />\n        <mapping file-type-id=\"TYPE_BODY\" extensions=\"tpb\" />\n      </extensions>\n      <general>\n        <lookup-ddl-files value=\"true\" />\n        <create-ddl-files value=\"false\" />\n        <synchronize-ddl-files value=\"true\" />\n        <use-qualified-names value=\"false\" />\n        <make-scripts-rerunnable value=\"true\" />\n      </general>\n    </ddl-file-settings>\n    <general-settings>\n      <regional-settings>\n        <date-format value=\"MEDIUM\" />\n        <number-format value=\"UNGROUPED\" />\n        <locale value=\"SYSTEM_DEFAULT\" />\n        <use-custom-formats value=\"false\" />\n      </regional-settings>\n      <environment>\n        <environment-types>\n          <environment-type id=\"development\" name=\"Development\" description=\"Development environment\" color=\"-2430209/-12296320\" readonly-code=\"false\" readonly-data=\"false\" />\n          <environment-type id=\"integration\" name=\"Integration\" description=\"Integration environment\" color=\"-2621494/-12163514\" readonly-code=\"true\" readonly-data=\"false\" />\n          <environment-type id=\"production\" name=\"Production\" description=\"Productive environment\" color=\"-11574/-10271420\" readonly-code=\"true\" readonly-data=\"true\" />\n          <environment-type id=\"other\" name=\"Other\" description=\"\" color=\"-1576/-10724543\" readonly-code=\"false\" readonly-data=\"false\" />\n        </environment-types>\n        <visibility-settings>\n          <connection-tabs value=\"true\" />\n          <dialog-headers value=\"true\" />\n          <object-editor-tabs value=\"true\" />\n          <script-editor-tabs value=\"false\" />\n          <execution-result-tabs value=\"true\" />\n        </visibility-settings>\n      </environment>\n    </general-settings>\n  </component>\n  <component name=\"DBNavigator.Project.StatementExecutionManager\">\n    <execution-variables />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/dbnavigator.xml b/.idea/dbnavigator.xml
+--- a/.idea/dbnavigator.xml	(revision b041a7a417c1c8ae6fcdc25356d1fbd86ff90a21)
++++ b/.idea/dbnavigator.xml	(date 1767937782776)
+@@ -1,5 +1,9 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="DBNavigator.Project.DDLFileAttachmentManager">
++    <mappings />
++    <preferences />
++  </component>
+   <component name="DBNavigator.Project.DataEditorManager">
+     <record-view-column-sorting-type value="BY_INDEX" />
+     <value-preview-text-wrapping value="false" />
+@@ -18,6 +22,12 @@
+       <format value="EXCEL" />
+       <charset value="UTF-8" />
+     </export-instructions>
++  </component>
++  <component name="DBNavigator.Project.DatabaseAssistantManager">
++    <assistants />
++    <selection-state>
++      <model-selection />
++    </selection-state>
+   </component>
+   <component name="DBNavigator.Project.DatabaseBrowserManager">
+     <autoscroll-to-editor value="false" />
+@@ -56,6 +66,8 @@
+         <display-mode value="TABBED" />
+         <navigation-history-size value="100" />
+         <show-object-details value="false" />
++        <enable-sticky-paths value="true" />
++        <enable-quick-filters value="false" />
+       </general>
+       <filters>
+         <object-type-filter>
+@@ -66,6 +78,7 @@
+           <object-type name="CHARSET" enabled="true" />
+           <object-type name="TABLE" enabled="true" />
+           <object-type name="VIEW" enabled="true" />
++          <object-type name="JSON_VIEW" enabled="true" />
+           <object-type name="MATERIALIZED_VIEW" enabled="true" />
+           <object-type name="NESTED_TABLE" enabled="true" />
+           <object-type name="COLUMN" enabled="true" />
+@@ -81,9 +94,16 @@
+           <object-type name="TYPE" enabled="true" />
+           <object-type name="TYPE_ATTRIBUTE" enabled="true" />
+           <object-type name="ARGUMENT" enabled="true" />
++          <object-type name="JAVA_CLASS" enabled="true" />
++          <object-type name="JAVA_FIELD" enabled="true" />
++          <object-type name="JAVA_METHOD" enabled="true" />
++          <object-type name="JAVA_RESOURCE" enabled="true" />
+           <object-type name="DIMENSION" enabled="true" />
+           <object-type name="CLUSTER" enabled="true" />
+           <object-type name="DBLINK" enabled="true" />
++          <object-type name="CREDENTIAL" enabled="true" />
++          <object-type name="AI_PROFILE" enabled="true" />
++          <object-type name="AI_MODEL" enabled="true" />
+         </object-type-filter>
+       </filters>
+       <sorting>
+@@ -91,6 +111,7 @@
+         <object-type name="FUNCTION" sorting-type="NAME" />
+         <object-type name="PROCEDURE" sorting-type="NAME" />
+         <object-type name="ARGUMENT" sorting-type="POSITION" />
++        <object-type name="TYPE ATTRIBUTE" sorting-type="POSITION" />
+       </sorting>
+       <default-editors>
+         <object-type name="VIEW" editor-type="SELECTION" />
+@@ -108,9 +129,8 @@
+           <object-type name="CHARSET" enabled="false" />
+           <object-type name="TABLE" enabled="true" />
+           <object-type name="VIEW" enabled="true" />
++          <object-type name="JSON VIEW" enabled="true" />
+           <object-type name="MATERIALIZED VIEW" enabled="true" />
+-          <object-type name="NESTED TABLE" enabled="false" />
+-          <object-type name="COLUMN" enabled="false" />
+           <object-type name="INDEX" enabled="true" />
+           <object-type name="CONSTRAINT" enabled="true" />
+           <object-type name="DATASET TRIGGER" enabled="true" />
+@@ -121,11 +141,16 @@
+           <object-type name="FUNCTION" enabled="true" />
+           <object-type name="PACKAGE" enabled="true" />
+           <object-type name="TYPE" enabled="true" />
+-          <object-type name="TYPE ATTRIBUTE" enabled="false" />
+-          <object-type name="ARGUMENT" enabled="false" />
++          <object-type name="JAVA CLASS" enabled="true" />
++          <object-type name="INNER CLASS" enabled="true" />
++          <object-type name="JAVA FIELD" enabled="true" />
++          <object-type name="JAVA METHOD" enabled="true" />
++          <object-type name="JAVA PARAMETER" enabled="true" />
++          <object-type name="JAVA RESOURCE" enabled="true" />
+           <object-type name="DIMENSION" enabled="false" />
+           <object-type name="CLUSTER" enabled="false" />
+           <object-type name="DBLINK" enabled="true" />
++          <object-type name="CREDENTIAL" enabled="false" />
+         </lookup-objects>
+         <force-database-load value="false" />
+         <prompt-connection-selection value="true" />
+@@ -141,11 +166,11 @@
+         <nulls-first value="true" />
+         <max-sorting-columns value="4" />
+       </sorting>
+-      <tracking-columns>
+-        <columnNames value="" />
++      <audit-columns>
++        <column-names value="" />
+         <visible value="true" />
+         <editable value="false" />
+-      </tracking-columns>
++      </audit-columns>
+     </dataset-grid-settings>
+     <dataset-editor-settings>
+       <text-editor-popup>
+@@ -154,11 +179,11 @@
+         <data-length-threshold value="100" />
+         <popup-delay value="1000" />
+       </text-editor-popup>
+-      <values-list-popup>
++      <values-actions-popup>
+         <show-popup-button value="true" />
+         <element-count-threshold value="1000" />
+         <data-length-threshold value="250" />
+-      </values-list-popup>
++      </values-actions-popup>
+       <general>
+         <fetch-block-size value="100" />
+         <fetch-timeout value="30" />
+@@ -182,6 +207,8 @@
+           <content-type name="Java" enabled="true" />
+           <content-type name="SQL" enabled="true" />
+           <content-type name="PL/SQL" enabled="true" />
++          <content-type name="JSON" enabled="true" />
++          <content-type name="JSON5" enabled="true" />
+           <content-type name="Groovy" enabled="true" />
+           <content-type name="AIDL" enabled="true" />
+           <content-type name="YAML" enabled="true" />
+@@ -202,6 +229,7 @@
+       <confirmations>
+         <save-changes value="false" />
+         <revert-changes value="true" />
++        <exit-on-changes value="ASK" />
+       </confirmations>
+     </code-editor-settings>
+     <code-completion-settings>
+@@ -219,6 +247,7 @@
+           <user-schema>
+             <filter-element type="OBJECT" id="table" selected="true" />
+             <filter-element type="OBJECT" id="view" selected="true" />
++            <filter-element type="OBJECT" id="json view" selected="true" />
+             <filter-element type="OBJECT" id="materialized view" selected="true" />
+             <filter-element type="OBJECT" id="index" selected="true" />
+             <filter-element type="OBJECT" id="constraint" selected="true" />
+@@ -236,6 +265,7 @@
+           <public-schema>
+             <filter-element type="OBJECT" id="table" selected="false" />
+             <filter-element type="OBJECT" id="view" selected="false" />
++            <filter-element type="OBJECT" id="json view" selected="false" />
+             <filter-element type="OBJECT" id="materialized view" selected="false" />
+             <filter-element type="OBJECT" id="index" selected="false" />
+             <filter-element type="OBJECT" id="constraint" selected="false" />
+@@ -253,6 +283,7 @@
+           <any-schema>
+             <filter-element type="OBJECT" id="table" selected="true" />
+             <filter-element type="OBJECT" id="view" selected="true" />
++            <filter-element type="OBJECT" id="json view" selected="true" />
+             <filter-element type="OBJECT" id="materialized view" selected="true" />
+             <filter-element type="OBJECT" id="index" selected="true" />
+             <filter-element type="OBJECT" id="constraint" selected="true" />
+@@ -281,6 +312,7 @@
+           <user-schema>
+             <filter-element type="OBJECT" id="table" selected="true" />
+             <filter-element type="OBJECT" id="view" selected="true" />
++            <filter-element type="OBJECT" id="json view" selected="true" />
+             <filter-element type="OBJECT" id="materialized view" selected="true" />
+             <filter-element type="OBJECT" id="index" selected="true" />
+             <filter-element type="OBJECT" id="constraint" selected="true" />
+@@ -298,6 +330,7 @@
+           <public-schema>
+             <filter-element type="OBJECT" id="table" selected="true" />
+             <filter-element type="OBJECT" id="view" selected="true" />
++            <filter-element type="OBJECT" id="json view" selected="true" />
+             <filter-element type="OBJECT" id="materialized view" selected="true" />
+             <filter-element type="OBJECT" id="index" selected="true" />
+             <filter-element type="OBJECT" id="constraint" selected="true" />
+@@ -315,6 +348,7 @@
+           <any-schema>
+             <filter-element type="OBJECT" id="table" selected="true" />
+             <filter-element type="OBJECT" id="view" selected="true" />
++            <filter-element type="OBJECT" id="json view" selected="true" />
+             <filter-element type="OBJECT" id="materialized view" selected="true" />
+             <filter-element type="OBJECT" id="index" selected="true" />
+             <filter-element type="OBJECT" id="constraint" selected="true" />
+@@ -332,6 +366,7 @@
+         </extended-filter>
+       </filters>
+       <sorting enabled="true">
++        <sorting-element type="OBJECT" id="json view" />
+         <sorting-element type="RESERVED_WORD" id="keyword" />
+         <sorting-element type="RESERVED_WORD" id="datatype" />
+         <sorting-element type="OBJECT" id="column" />
+@@ -377,6 +412,11 @@
+         <debug-execution-timeout value="600" />
+         <parameter-history-size value="10" />
+       </method-execution>
++      <method-execution>
++        <execution-timeout value="30" />
++        <debug-execution-timeout value="600" />
++        <parameter-history-size value="10" />
++      </method-execution>
+     </execution-engine-settings>
+     <operation-settings>
+       <transactions>
+@@ -400,10 +440,6 @@
+         <compile-dependencies value="ASK" />
+         <always-show-controls value="false" />
+       </compiler>
+-      <debugger>
+-        <debugger-type value="ASK" />
+-        <use-generic-runners value="true" />
+-      </debugger>
+     </operation-settings>
+     <ddl-file-settings>
+       <extensions>
+@@ -417,6 +453,7 @@
+         <mapping file-type-id="TYPE" extensions="tpe" />
+         <mapping file-type-id="TYPE_SPEC" extensions="tps" />
+         <mapping file-type-id="TYPE_BODY" extensions="tpb" />
++        <mapping file-type-id="JAVA_SOURCE" extensions="sql" />
+       </extensions>
+       <general>
+         <lookup-ddl-files value="true" />
+@@ -426,6 +463,14 @@
+         <make-scripts-rerunnable value="true" />
+       </general>
+     </ddl-file-settings>
++    <assistant-settings>
++      <credential-settings>
++        <credentials />
++      </credential-settings>
++      <profile-settings>
++        <profiles />
++      </profile-settings>
++    </assistant-settings>
+     <general-settings>
+       <regional-settings>
+         <date-format value="MEDIUM" />
